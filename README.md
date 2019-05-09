@@ -1,38 +1,30 @@
-# Module One Final Project Guidelines
+# README
 
-Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-For your final project, we'll be building a Command Line database application.
+Things you may want to cover:
 
-## Project Requirements
+* Ruby version
 
-### Option One - Data Analytics Project
+* System dependencies
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have at minimum three models including one join model. This means you must have a many-to-many relationship.
-3. You should seed your database using data that you collect either from a CSV, a website by scraping, or an API.
-4. Your models should have methods that answer interesting questions about the data. For example, if you've collected info about movie reviews, what is the most popular movie? What movie has the most reviews?
-5. You should provide a CLI to display the return values of your interesting methods.  
-6. Use good OO design patterns. You should have separate classes for your models and CLI interface.
+* Configuration
 
   **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
 
 ### Option Two - Command Line CRUD App
+* Database creation
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have a minimum of three models.
-3. You should build out a CLI to give your user full CRUD ability for at least one of your resources. For example, build out a command line To-Do list. A user should be able to create a new to-do, see all todos, update a todo item, and delete a todo. Todos can be grouped into categories, so that a to-do has many categories and categories have many to-dos.
-4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
+* Database initialization
 
-### Brainstorming and Proposing a Project Idea
+* How to run the test suite
 
-Projects need to be approved prior to launching into them, so take some time to brainstorm project options that will fulfill the requirements above.  You must have a minimum of four [user stories](https://en.wikipedia.org/wiki/User_story) to help explain how a user will interact with your app.  A user story should follow the general structure of `"As a <role>, I want <goal/desire> so that <benefit>"`. In example, if we were creating an app to randomly choose nearby restaurants on Yelp, we might write:
+* Services (job queues, cache servers, search engines, etc.)
 
-* As a user, I want to be able to enter my name to retrieve my records
-* As a user, I want to enter a location and be given a random nearby restaurant suggestion
-* As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
-* As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
+* Deployment instructions
 
+<<<<<<< HEAD
 ## Instructions
 
 1. Fork and clone this repository.
@@ -57,3 +49,6 @@ Projects need to be approved prior to launching into them, so take some time to 
 # in config/environment.rb add this line:
 ActiveRecord::Base.logger = nil
 ```
+=======
+* ...
+>>>>>>> 9cbcebf6b2898c39629572c28adc70bb88002aae
