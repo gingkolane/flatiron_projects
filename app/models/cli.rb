@@ -1,4 +1,4 @@
-class CommandLineInterface
+Chloeclass CommandLineInterface
 
 def self.start_cli
 system 'clear'

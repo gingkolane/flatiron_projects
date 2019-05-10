@@ -25,6 +25,7 @@ Things you may want to cover:
 * Deployment instructions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Instructions
 
 1. Fork and clone this repository.
@@ -49,6 +50,9 @@ Things you may want to cover:
 # in config/environment.rb add this line:
 ActiveRecord::Base.logger = nil
 ```
+=======
+* ...
+>>>>>>> 9cbcebf6b2898c39629572c28adc70bb88002aae
 =======
 * ...
 >>>>>>> 9cbcebf6b2898c39629572c28adc70bb88002aae
