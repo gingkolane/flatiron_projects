@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_092342) do
+ActiveRecord::Schema.define(version: 2019_05_29_160317) do
 
   create_table "conditions", primary_key: "condition_id", force: :cascade do |t|
     t.text "CONDITION", limit: 200
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_092342) do
     t.text "SPONSOR_TYPE", limit: 50
     t.text "AGENCY", limit: 200
     t.text "AGENCY_CLASS", limit: 50
-    t.text "NCT_ID", limit: 50, null: false
+    t.text "study_id", limit: 50, null: false
   end
 
   create_table "studies", force: :cascade do |t|
@@ -59,18 +59,18 @@ ActiveRecord::Schema.define(version: 2019_05_29_092342) do
     t.text "URL", limit: 250
   end
 
-  create_table "studies_conditions", force: :cascade do |t|
+  create_table "study_conditions", force: :cascade do |t|
     t.text "study_id", limit: 50, null: false
     t.integer "condition_id", limit: 11
   end
 
-  create_table "studies_interventions", force: :cascade do |t|
+  create_table "study_interventions", force: :cascade do |t|
     t.text "study_id", limit: 50, null: false
     t.integer "NO", limit: 11
     t.integer "intervention_id", limit: 11
   end
 
-  create_table "studies_investigators", force: :cascade do |t|
+  create_table "study_investigators", force: :cascade do |t|
     t.text "study_id", limit: 50
     t.integer "investigator_id", limit: 20
   end

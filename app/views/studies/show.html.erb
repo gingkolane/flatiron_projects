@@ -1,12 +1,30 @@
 <h1>Study</h1>
 
 
+<H2>Title</H2>
+<%= @study.BRIEF_TITLE %><br>
+<h3>Summary</h3>
+<%= @study.BRIEF_SUMMARY %><br>
+<h3>Study Type</h3>
+<%= @study.STUDY_TYPE %><br>
+<h3>Phase</h3>
+<%= @study.PHASE %><br>
+<h3>Gender</h3>
+<%= @study.GENDER %><br>
+
+<h2>Condition</h2>
+<%= @study.find_conditions %><br>
+
+<h2>Investigators</h2>
+<%= @study.find_investigators %><br>
+
+<h2>Interventions</h2>
+<%= @study.find_interventions %><br><br>
+
+<%= link_to 'Studies', studies_path %>
 
 
 
 
 
 
-<%= form_tag study_path(@study.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@study.name}" %>
-<% end %> 

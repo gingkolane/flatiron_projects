@@ -1,3 +1,4 @@
 class Intervention < ApplicationRecord
-  has_and_belongs_to_many :studies
+  has_many :study_interventions
+  has_many :studies, through: :study_interventions
 end
