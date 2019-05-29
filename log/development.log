@@ -1005,3 +1005,418 @@ Completed 200 OK in 63ms (Views: 55.5ms | ActiveRecord: 4.8ms)
   [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 11580], ["LIMIT", 1]]
   [1m[36mStudyInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" ORDER BY "study_investigators"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 11580], ["LIMIT", 1]]
+Started GET "/conditions" for ::1 at 2019-05-29 13:48:21 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.9ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/conditions/index.html.erb:3
+  Rendered conditions/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/conditions/1" for ::1 at 2019-05-29 13:48:23 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  Rendered conditions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/conditions/2" for ::1 at 2019-05-29 13:48:26 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCondition Load (0.7ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  Rendered conditions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/conditions/1" for ::1 at 2019-05-29 13:49:44 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  Rendered conditions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 13:52:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/conditions" for ::1 at 2019-05-29 13:52:31 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/conditions/index.html.erb:3
+  Rendered conditions/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-29 13:52:50 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (16.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:3
+  Rendered studies/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 70ms (Views: 51.2ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-29 13:53:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/interventions/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/interventions" for ::1 at 2019-05-29 13:54:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/interventions"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/investigators" for ::1 at 2019-05-29 13:58:03 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  Rendered investigators/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/investigators" for ::1 at 2019-05-29 13:58:50 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  Rendered investigators/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/investigators" for ::1 at 2019-05-29 13:59:06 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  Rendered investigators/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/investigators/index.html.erb:19: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/investigators" for ::1 at 2019-05-29 13:59:18 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  Rendered investigators/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/investigators/index.html.erb:17: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/investigators/index.html.erb:17: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/investigators" for ::1 at 2019-05-29 13:59:36 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (109.9ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators"[0m
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (1112.9ms)
+Completed 200 OK in 1171ms (Views: 1058.4ms | ActiveRecord: 110.9ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:00:09 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (76.1ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators"[0m
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (2125.3ms)
+Completed 200 OK in 2183ms (Views: 2104.9ms | ActiveRecord: 76.1ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:00:33 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (278.6ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators"[0m
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (4468.9ms)
+Completed 200 OK in 4547ms (Views: 4266.6ms | ActiveRecord: 278.6ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:00:56 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.8ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:01:08 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.6ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:01:18 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (2.6ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Investigator:0x00007fb4c59a1a38>):
+    17: 
+    18: 
+    19: <%= form_tag investigator_path(@investigator.id), method: "delete" do %>
+    20:   <%= submit_tag "Delete #{@investigator.name}" %>
+    21: <% end %> 
+  
+app/views/investigators/show.html.erb:20:in `block in _app_views_investigators_show_html_erb__4387728679338886095_70207193023660'
+app/views/investigators/show.html.erb:19:in `_app_views_investigators_show_html_erb__4387728679338886095_70207193023660'
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:01:31 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:03:08 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 257ms (Views: 252.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:03:29 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.7ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:03:40 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.6ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:03:51 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-29 14:07:17 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:07:19 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-29 14:07:30 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  Rendered investigators/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-29 14:07:34 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.9ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/conditions/index.html.erb:3
+  Rendered conditions/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-29 14:07:37 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (7.9ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:3
+  Rendered studies/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 87ms (Views: 67.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-29 14:08:40 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (1.6ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyInvestigator Load (4.2ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mStudyIntervention Load (3.0ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.7ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  Rendered studies/show.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 128ms (Views: 109.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-29 14:08:43 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (3.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:3
+  Rendered studies/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-29 14:09:21 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyInvestigator Load (1.6ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mStudyIntervention Load (1.4ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  Rendered studies/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 76ms (Views: 65.0ms | ActiveRecord: 4.2ms)
+
+

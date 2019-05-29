@@ -1,21 +1,14 @@
-<h1>Investigation</h1>
+<h1>Investigator</h1>
+
+<%= @investigator.NAME_DEGREE %><br>
+<%= @investigator.ROLE %><br>
+<%= @investigator.FACILITY_NAME %>
+<%= @investigator.CITY %>
+<%= @investigator.STATE %>
+<%= @investigator.ZIP %>
+<%= @investigator.COUNTRY %><br><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%= form_tag investigator_path(@investigator.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@investigator.name}" %>
-<% end %> 
+<%= link_to 'Studies', studies_path %>
+<%= link_to 'Interventions', interventions_path %>
+<%= link_to 'Conditions', conditions_path %>

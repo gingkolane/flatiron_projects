@@ -1,20 +1,13 @@
 <h1>Condition</h1>
 
+<%= @condition.CONDITION %>
 
 
 
 
 
 
+<%= link_to 'Studies', studies_path %>
+<% link_to 'Interventions', interventions_path %>
+<% link_to 'Investigators', investigators_path %>
 
-
-
-
-
-
-
-
-
-<%= form_tag condition_path(@condition.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@condition.name}" %>
-<% end %> 

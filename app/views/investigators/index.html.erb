@@ -1,6 +1,13 @@
 <h1>Investigators</h1>
 
 
-<%= link_to 'Studies', studies_path %>
-<%= link_to 'Interventions', interventions_path %>
-<%= link_to 'Conditions', conditions_path %>
+<% @investigators.take(25).each do |i| %>
+	<%= link_to i.NAME_DEGREE, i %><br>
+	<%= i.ROLE %><br>
+	<%= i.FACILITY_NAME %><br><br>
+<% end %>
+
+
+<% link_to 'Studies', studies_path %>
+<% link_to 'Interventions', interventions_path %>
+<% link_to 'Conditions', conditions_path %>

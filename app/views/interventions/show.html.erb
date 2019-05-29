@@ -14,6 +14,6 @@
 
 
 
-<%= form_tag intervention_path(@intervention.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@intervention.name}" %>
-<% end %> 
+<%= link_to 'Studies', studies_path %>
+<% link_to 'Interventions', interventions_path %>
+<% link_to 'Investigators', investigators_path %>
