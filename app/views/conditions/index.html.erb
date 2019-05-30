@@ -1,10 +1,9 @@
 <h1>Conditions</h1>
 
-<% @conditions.take(10).each do |condition| %>
+<% @conditions.take(25).each do |condition| %>
 	<%= link_to condition.CONDITION, condition %><br>
 
 <% end %>
 
-<%= link_to 'Studies', studies_path %>
-<%# link_to 'Interventions', interventions_path %>
-<%# link_to 'Investigators', investigators_path %>
+
+<%= link_to 'Home', studies_path %>

@@ -1,5 +1,10 @@
 <h1>Interventions</h1>
 
-<%= link_to 'Studies', studies_path %>
-<%= link_to 'Conditions', conditions_path %>
-<%= link_to 'Investigators', investigators_path %>
+<ul>
+<% @interventions.take(30).each do |i| %>
+	<li><%= link_to i.INTERVENTION_NAME, i %></li>
+<% end %>
+</ul>
+
+
+<%= link_to 'Home', studies_path %>

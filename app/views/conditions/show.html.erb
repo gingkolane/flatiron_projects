@@ -1,13 +1,11 @@
 <h1>Condition</h1>
 
-<%= @condition.CONDITION %>
+<%= @condition.CONDITION %><br>
 
+<h2>Study</h2>
+<%= @condition.study_title %><br>
+<%= @condition.study_summary %><br><br>
 
-
-
-
-
-<%= link_to 'Studies', studies_path %>
-<% link_to 'Interventions', interventions_path %>
-<% link_to 'Investigators', investigators_path %>
+<%= link_to 'Home', studies_path %>
+<%= link_to 'Conditions', conditions_path %>
 

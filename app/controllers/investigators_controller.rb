@@ -8,30 +8,30 @@ class InvestigatorsController < ApplicationController
 		find_investigator
 	end
 
-	def new
-		@investigator = Investigator.new
-	end
+	# def new
+	# 	@investigator = Investigator.new
+	# end
 
-	def create
-		@investigator = Investigator.create(investigator_params)
-		redirect_to @investigator
-	end
+	# def create
+	# 	@investigator = Investigator.create(investigator_params)
+	# 	redirect_to @investigator
+	# end
 
-	def edit
-		find_investigator
-	end
+	# def edit
+	# 	find_investigator
+	# end
 
-	def update
-		find_investigator
-		@investigator.update(investigator_params)
-		redirect_to @investigator
-	end
+	# def update
+	# 	find_investigator
+	# 	@investigator.update(investigator_params)
+	# 	redirect_to @investigator
+	# end
 
-	def destroy
-		find_investigator
-		@investigator.destroy
-		redirect_to investigators_path
-	end
+	# def destroy
+	# 	find_investigator
+	# 	@investigator.destroy
+	# 	redirect_to investigators_path
+	# end
 
 	private
 
@@ -39,8 +39,8 @@ class InvestigatorsController < ApplicationController
 		@investigator = Investigator.find(params[:id])
 	end
 
-	def investigator_params
+	# def investigator_params
 
-	end
+	# end
 
 end

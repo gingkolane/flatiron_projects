@@ -1,8 +1,8 @@
 <h1>Study</h1>
 
 
-<H2>Title</H2>
-<%= @study.BRIEF_TITLE %><br>
+<h2>Title</h2>
+<%= @study.BRIEF_TITLE %><%= @study.OVERALL_STATUS %><br>
 <h3>Summary</h3>
 <%= @study.BRIEF_SUMMARY %><br>
 <h3>Study Type</h3>
@@ -11,6 +11,15 @@
 <%= @study.PHASE %><br>
 <h3>Gender</h3>
 <%= @study.GENDER %><br>
+
+<%= @study.ENROLLMENT %>
+<%= @study.ENROLLMENT_TYPE %>
+
+
+<%= @study.MINIMUM_AGE %>
+<%= @study.MAXIMUM_AGE %>
+<%= @study.URL %>
+
 
 <h2>Condition</h2>
 <%= @study.find_conditions %><br>
@@ -21,7 +30,8 @@
 <h2>Interventions</h2>
 <%= @study.find_interventions %><br><br>
 
-<%= link_to 'Studies', studies_path %>
+<%= link_to 'Home', studies_path %>
+
 
 
 

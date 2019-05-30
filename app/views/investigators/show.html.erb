@@ -8,7 +8,17 @@
 <%= @investigator.ZIP %>
 <%= @investigator.COUNTRY %><br><br>
 
+<h2>Study</h2>
+<%= @investigator.study_title %><br>
+<%= @investigator.study_summary %><br><br>
 
-<%= link_to 'Studies', studies_path %>
-<%= link_to 'Interventions', interventions_path %>
-<%= link_to 'Conditions', conditions_path %>
+<h2>Conditions</h2>
+<%= @investigator.find_conditions %><br><br>
+
+<h2>Interventions</h2>
+<%= @investigator.find_interventions %><br><br>
+
+<!-- <a href="/investigators">All Investigators</a> -->
+
+<%= link_to 'Home', studies_path %>
+<%= link_to 'Investigators', investigators_path %>

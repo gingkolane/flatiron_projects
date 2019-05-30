@@ -1,19 +1,13 @@
 <h1>Intervention</h1>
 
 
+<div class=index>
+	<h2><%= @intervention.INTERVENTION_NAME %></h2><br>
+	<h3><%= @intervention.INTERVENTION_TYPE %><h3>
+	<p><%= @intervention.DESCRIPTION %><p>
+</div>
 
 
+<%= link_to 'Home', studies_path %>
+<%= link_to 'Interventions', interventions_path %>
 
-
-
-
-
-
-
-
-
-
-
-<%= link_to 'Studies', studies_path %>
-<% link_to 'Interventions', interventions_path %>
-<% link_to 'Investigators', investigators_path %>
