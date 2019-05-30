@@ -1,3 +1,5 @@
 class Sponsor < ApplicationRecord
-  has_many :studies
+
+  has_and_belongs_to_many :studies
+
 end

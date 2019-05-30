@@ -6,6 +6,9 @@
 <%= @condition.CONDITION %><br>
 
 <h2>Study</h2>
-<%= @condition.study_title %><br>
-<%= @condition.study_summary %><br><br>
+  <% @condition.studies.each do |study| %><br>
+    <%= study.BRIEF_TITLE %>
+    <br>
+    <%= study.BRIEF_SUMMARY %><br><br>
+  <% end %>
 </div>

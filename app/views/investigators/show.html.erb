@@ -25,14 +25,17 @@
 
 
 <h2>Study</h2>
-<%= @investigator.study_title %><br>
-<%= @investigator.study_summary %><br><br>
+  <% @investigator.studies.each do |study|%>
+  <%= study.BRIEF_TITLE %><br>
+  <%= study.BRIEF_SUMMARY %><br><br>
+  <% end %>
 
-<h2>Conditions</h2>
-<%= @investigator.find_conditions %><br><br>
+<h2>Sponsors</h2>
+<%= @investigator.test %>
+
 
 <h2>Interventions</h2>
-<%= @investigator.find_interventions %><br><br>
+
 </div>
 <!-- <a href="/investigators">All Investigators</a> -->
 

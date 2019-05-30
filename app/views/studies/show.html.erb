@@ -8,14 +8,28 @@
 <h3>Summary</h3>
 <%= @study.BRIEF_SUMMARY %><br>
 
-<h3>Condition</h3>
-<%= @study.find_conditions %><br>
+  <h3>Condition</h3>
+  <% @study.conditions.each do |condition| %><br>
+  <%= condition.CONDITION %><br>
+  <% end %>
 
 <h3>Interventions</h3>
-<%= @study.find_interventions %><br>
+  <% @study.interventions.each do |intervention| %><br>
+  <%= intervention.INTERVENTION_NAME %><br>
+  <%= intervention.DESCRIPTION %><br>
+  <% end %> 
 
 <h3>Investigators</h3>
-<%= @study.find_investigators %><br>
+<% @study.investigators.each do |investigator| %><br>
+  <%= investigator.NAME_DEGREE %><br>
+<%= investigator.ROLE %><br>
+<%= investigator.FACILITY_NAME %><br>
+<%= investigator.CITY %><br>
+<%= investigator.STATE %><br>
+<%= investigator.ZIP %><br>
+<%= investigator.COUNTRY %><br>
+<% end  %>
+
 
 <h3>Criteria</h3>
 <%= @study.CRITERIA %><br>

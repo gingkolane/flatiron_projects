@@ -1,10 +1,12 @@
 class Intervention < ApplicationRecord
-  has_many :study_interventions
-  has_many :studies, through: :study_interventions
 
-  def find_intervention
-  	self.intervention_id
-  end
+  has_and_belongs_to_many :studies
+  # has_many :study_interventions
+  # has_many :studies, through: :study_interventions
+
+  # def find_intervention
+  # 	self.intervention_id
+  # end
 
   # def find_study_id
   # 	StudyIntervention.find_by(intervention_id: find_intervention).study_id
