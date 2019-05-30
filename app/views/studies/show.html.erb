@@ -1,10 +1,9 @@
-<h1>Study</h1>
+<div class="show">
 
+<h1><strong><a href='<%= @study.URL %>' target="_blank"><%= @study.BRIEF_TITLE %></a></strong></h1>
+<h2>Study Status:</h2>
 
-
-<h2><strong><%= @study.BRIEF_TITLE %><%= @study.OVERALL_STATUS %></strong></h2>
-
-<p>Start Date: <%= @study.START_DATE %> - Completion Date: <%= @study.COMPLETION_DATE %></p>
+<p><strong>Status:</strong> <%= @study.OVERALL_STATUS %> <strong>Start Date:</strong> <%= @study.START_DATE %> - <strong>Completion Date:</strong> <%= @study.COMPLETION_DATE %></p>
 
 <h3>Summary</h3>
 <%= @study.BRIEF_SUMMARY %><br>
@@ -31,10 +30,10 @@
 <p><%= @study.ENROLLMENT %></p>
 
 <h3>Ages</h3>
-<p><%= @study.MINIMUM_AGE %> - <%= @study.MAXIMUM_AGE %><p>
-<a href='<%= @study.URL %>'>Study URL</a>
+<p><%= @study.MINIMUM_AGE %> - <%= @study.MAXIMUM_AGE %></p>
 
 
+</div>
 
 
 

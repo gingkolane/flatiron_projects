@@ -6381,3 +6381,1428 @@ Processing by InvestigatorsController#index as HTML
 Completed 200 OK in 70ms (Views: 66.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/investigators" for ::1 at 2019-05-30 15:44:11 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (1.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:45:01 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:4
+  Rendered investigators/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:45:59 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 15:46:25 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (4.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (26.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (2.4ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.9ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.8ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.9ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 99ms (Views: 59.5ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:46:29 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (1.0ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:5
+  Rendered conditions/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:46:31 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (1.7ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:5
+  Rendered interventions/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:46:42 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:46:45 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (1.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:46:53 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (3.1ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:48:03 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.9ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 82ms (Views: 77.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:48:08 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 74ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:48:29 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:5
+  Rendered interventions/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:48:35 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.6ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 76ms (Views: 71.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 15:50:29 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 127ms (Views: 118.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:50:31 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:50:51 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 103ms (Views: 99.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:50:53 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:5
+  Rendered conditions/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:51:26 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:51:29 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:51:30 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:51:31 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:51:32 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:51:34 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:51:34 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:52:57 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 80ms (Views: 75.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:52:58 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (3.7ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.8ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (3.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 84ms (Views: 68.9ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:53:35 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 15:53:35 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:53:36 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.0ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (3.5ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 72ms (Views: 60.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:54:50 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  Rendered studies/show.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/studies/show.html.erb:7: syntax error, unexpected backslash, expecting ')'
+...);@output_buffer.safe_append='\' %> '.freeze;@output_buffer....
+...                              ^
+/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/studies/show.html.erb:52: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/flatironaccesslabs/Documents/GitHub/Whats-Up-Doc/app/views/studies/show.html.erb:54: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/studies/show.html.erb:7: syntax error, unexpected backslash, expecting ')'
+app/views/studies/show.html.erb:52: syntax error, unexpected ensure, expecting ')'
+app/views/studies/show.html.erb:54: syntax error, unexpected end, expecting ')'
+Started GET "/studies/1" for ::1 at 2019-05-30 15:55:34 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.3ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.5ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 50ms (Views: 42.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:56:32 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:57:07 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.2ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 69ms (Views: 61.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:57:47 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.1ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (2.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 56ms (Views: 48.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:58:14 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.1ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.9ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 53ms (Views: 46.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 15:59:17 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.3ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.0ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 48ms (Views: 40.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:59:26 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 58ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:59:32 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:59:35 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 15:59:38 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.1ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (1.0ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 63ms (Views: 52.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:59:47 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.5ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 15:59:48 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 112ms (Views: 109.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 15:59:50 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/conditions/1" for ::1 at 2019-05-30 15:59:52 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.3ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mStudy Load (36.5ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03070964"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  [1m[36mCACHE StudyCondition Load (0.0ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03070964"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  Rendered conditions/show.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 69ms (Views: 27.5ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 15:59:54 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 15:59:56 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.6ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:00:27 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:00:53 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:01:35 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:02:26 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:02:45 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:03:00 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:03:09 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 70.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 16:03:16 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:03:18 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (4.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.1ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.7ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 70ms (Views: 58.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 16:03:32 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.5ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 16:03:33 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.5ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (7.4ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (3.8ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 76ms (Views: 58.9ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 16:04:49 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.6ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 66ms (Views: 59.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 16:04:58 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/studies/12" for ::1 at 2019-05-30 16:05:00 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.4ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (1.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 290], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (0.3ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.5ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 432], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 3658], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 66ms (Views: 59.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/studies/12" for ::1 at 2019-05-30 16:06:35 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.5ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 290], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (0.3ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 432], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.6ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02736344"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 3658], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 16:06:47 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/conditions/9" for ::1 at 2019-05-30 16:06:49 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.4ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 9], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mStudy Load (1.1ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03063164"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  [1m[36mCACHE StudyCondition Load (0.0ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 9], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03063164"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  Rendered conditions/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 116ms (Views: 111.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 16:06:52 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/studies/13" for ::1 at 2019-05-30 16:06:55 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudy Load (0.9ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.4ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02662634"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 309], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (0.2ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02662634"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (7.7ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 125], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT02662634"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.9ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 15403], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 73ms (Views: 59.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 16:07:40 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 16:07:42 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 16:07:43 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 16:07:46 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 16:07:47 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.4ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:07:49 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/interventions/3" for ::1 at 2019-05-30 16:07:52 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 16:08:01 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (2.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:08:02 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (3.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.1ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.1ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 55ms (Views: 43.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:10:01 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (1.9ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.3ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.1ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 79ms (Views: 69.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:10:32 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.0ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.8ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (1.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 63ms (Views: 53.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:10:43 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.3ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (0.7ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.7ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 71ms (Views: 60.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:10:45 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (1.6ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (0.6ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.1ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 77ms (Views: 70.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:10:58 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (0.6ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.1ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.4ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:11:31 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.6ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.8ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 70ms (Views: 61.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:11:42 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.6ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (2.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.6ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.7ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 64ms (Views: 54.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 16:16:23 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (0.7ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 16:16:25 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (1.8ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.6ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.4ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 72ms (Views: 62.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 16:17:02 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.4ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/conditions/1" for ::1 at 2019-05-30 16:17:04 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mStudy Load (1.5ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03070964"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  [1m[36mCACHE StudyCondition Load (0.0ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 1], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03070964"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  Rendered conditions/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 80ms (Views: 73.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 16:17:07 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (1.0ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:17:08 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 16:17:09 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:17:11 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (3.6ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.3ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.7ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 106ms (Views: 96.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-30 16:17:27 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[36mStudy Load (2.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/studies/index.html.erb:5
+  Rendered studies/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 90ms (Views: 82.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-30 16:17:28 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.3ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 11], ["LIMIT", 1]]
+  ↳ app/models/study.rb:11
+  [1m[36mStudyIntervention Load (1.3ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 2702], ["LIMIT", 1]]
+  ↳ app/models/study.rb:19
+  [1m[36mStudyInvestigator Load (1.7ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03066739"], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1369], ["LIMIT", 1]]
+  ↳ app/models/study.rb:15
+  Rendered studies/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 91ms (Views: 81.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/conditions" for ::1 at 2019-05-30 16:18:43 -0400
+Processing by ConditionsController#index as HTML
+  Rendering conditions/index.html.erb within layouts/application
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/conditions/index.html.erb:6
+  Rendered conditions/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 169ms (Views: 166.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/conditions/2" for ::1 at 2019-05-30 16:18:44 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  [1m[36mStudyCondition Load (0.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mStudy Load (277.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03062280"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  [1m[36mCACHE StudyCondition Load (0.0ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:10
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03062280"], ["LIMIT", 1]]
+  ↳ app/models/condition.rb:14
+  Rendered conditions/show.html.erb within layouts/application (281.9ms)
+Completed 200 OK in 319ms (Views: 37.8ms | ActiveRecord: 277.7ms)
+
+
+Started GET "/interventions" for ::1 at 2019-05-30 16:18:45 -0400
+Processing by InterventionsController#index as HTML
+  Rendering interventions/index.html.erb within layouts/application
+  [1m[36mIntervention Load (0.6ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" LIMIT ?[0m  [["LIMIT", 30]]
+  ↳ app/views/interventions/index.html.erb:7
+  Rendered interventions/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/interventions/1" for ::1 at 2019-05-30 16:18:47 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIntervention Load (0.2ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  Rendered interventions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-30 16:18:52 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[36mInvestigator Load (0.5ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 25]]
+  ↳ app/views/investigators/index.html.erb:6
+  Rendered investigators/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/investigators/1" for ::1 at 2019-05-30 16:18:53 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInvestigator Load (0.3ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudyInvestigator Load (5.5ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudy Load (0.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.1ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:16
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyCondition Load (1.2ms)[0m  [1m[34mSELECT  "study_conditions".* FROM "study_conditions" WHERE "study_conditions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCondition Load (0.2ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."condition_id" = ? LIMIT ?[0m  [["condition_id", 2674], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mCACHE StudyInvestigator Load (0.0ms)[0m  [1m[34mSELECT  "study_investigators".* FROM "study_investigators" WHERE "study_investigators"."investigator_id" = ? LIMIT ?[0m  [["investigator_id", 1], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:12
+  [1m[36mStudyIntervention Load (0.9ms)[0m  [1m[34mSELECT  "study_interventions".* FROM "study_interventions" WHERE "study_interventions"."study_id" = ? LIMIT ?[0m  [["study_id", "NCT03453541"], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  [1m[36mIntervention Load (0.9ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."intervention_id" = ? LIMIT ?[0m  [["intervention_id", 1631], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:32
+  Rendered investigators/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 82ms (Views: 67.0ms | ActiveRecord: 9.8ms)
+
+

@@ -1,11 +1,13 @@
-<h1>Investigators</h1>
+<div class="index">
+
+	<h1>Investigators</h1>
 
 
-<% @investigators.take(25).each do |i| %>
-	<%= link_to i.NAME_DEGREE, i %><br>
-	<%= i.ROLE %><br>
-	<%= i.FACILITY_NAME %><br><br>
-<% end %>
-
+	<% @investigators.take(25).each do |i| %>
+		<%= link_to i.NAME_DEGREE, i %><br>
+		<%= i.ROLE %><br>
+		<%= i.FACILITY_NAME %><br><br>
+	<% end %>
+</div>
 
 

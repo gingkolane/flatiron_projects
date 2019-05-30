@@ -1,10 +1,10 @@
-<h1>Studies</h1>
+<div class="index">
 
+	<h1>Studies</h1>
 
-<% @studies.take(25).each do |study| %>
-<li><%= link_to study.BRIEF_TITLE, study %></li><br>
+	<% @studies.take(25).each do |study| %>
+	<li><%= link_to study.BRIEF_TITLE, study %></li><br>
 
-
-<% end %>
-
+	<% end %>
+</div>
 

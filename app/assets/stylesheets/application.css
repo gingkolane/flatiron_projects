@@ -14,3 +14,15 @@
  *= require_self
  *= @import "semantic-ui";
  */
+
+.index {
+	margin-left: 20px;
+}
+
+.show {
+	margin-left: 20px;
+	}
+
+.description {
+	color: red;
+}
