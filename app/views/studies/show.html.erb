@@ -1,36 +1,43 @@
 <h1>Study</h1>
 
 
-<h2>Title</h2>
-<%= @study.BRIEF_TITLE %><%= @study.OVERALL_STATUS %><br>
+
+<h2><strong><%= @study.BRIEF_TITLE %><%= @study.OVERALL_STATUS %></strong></h2>
+
+<p>Start Date: <%= @study.START_DATE %> - Completion Date: <%= @study.COMPLETION_DATE %></p>
+
 <h3>Summary</h3>
 <%= @study.BRIEF_SUMMARY %><br>
+
+<h3>Condition</h3>
+<%= @study.find_conditions %><br>
+
+<h3>Interventions</h3>
+<%= @study.find_interventions %><br>
+
+<h3>Investigators</h3>
+<%= @study.find_investigators %><br>
+
+<h3>Criteria</h3>
+<%= @study.CRITERIA %><br>
+
 <h3>Study Type</h3>
 <%= @study.STUDY_TYPE %><br>
 <h3>Phase</h3>
 <%= @study.PHASE %><br>
 <h3>Gender</h3>
 <%= @study.GENDER %><br>
+<h3>Enrollment</h3>
+<p><%= @study.ENROLLMENT %></p>
 
-<%= @study.ENROLLMENT %>
-<%= @study.ENROLLMENT_TYPE %>
-
-
-<%= @study.MINIMUM_AGE %>
-<%= @study.MAXIMUM_AGE %>
-<%= @study.URL %>
+<h3>Ages</h3>
+<p><%= @study.MINIMUM_AGE %> - <%= @study.MAXIMUM_AGE %><p>
+<a href='<%= @study.URL %>'>Study URL</a>
 
 
-<h2>Condition</h2>
-<%= @study.find_conditions %><br>
 
-<h2>Investigators</h2>
-<%= @study.find_investigators %><br>
 
-<h2>Interventions</h2>
-<%= @study.find_interventions %><br><br>
 
-<%= link_to 'Home', studies_path %>
 
 
 

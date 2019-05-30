@@ -1,5 +1,6 @@
 <h1>Interventions</h1>
 
+
 <ul>
 <% @interventions.take(30).each do |i| %>
 	<li><%= link_to i.INTERVENTION_NAME, i %></li>
@@ -7,4 +8,4 @@
 </ul>
 
 
-<%= link_to 'Home', studies_path %>
+

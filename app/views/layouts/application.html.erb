@@ -4,12 +4,31 @@
     <title>WhatsUpDoc</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="">
   </head>
 
   <body>
+    <div class="ui inverted segment">
+  <div class="ui inverted secondary pointing menu">
+    <a class="active item" href="<%=studies_path %>">
+      Home
+    </a>
+    <a class="item" href="<%= conditions_path %>">
+      Conditions
+    </a>
+    <a class="item" href="<%= interventions_path %>">
+      Interventions
+    </a>
+     <a class="item" href="<%= investigators_path %>">
+      Investigators
+    </a>
+  </div>
+</div>
+
     <%= yield %>
   </body>
 </html>

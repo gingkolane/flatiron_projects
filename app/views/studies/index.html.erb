@@ -1,14 +1,10 @@
 <h1>Studies</h1>
 
-<ul>
+
 <% @studies.take(25).each do |study| %>
-<li><%= link_to study.BRIEF_TITLE, study %><%= study.START_DATE %><br></li>
-<li><%= study.CRITERIA %></li>
+<li><%= link_to study.BRIEF_TITLE, study %></li><br>
 
 
-</ul>
 <% end %>
 
-<%= link_to 'Conditions', conditions_path %>
-<%= link_to 'Interventions', interventions_path %>
-<%= link_to 'Investigators', investigators_path %>
+
