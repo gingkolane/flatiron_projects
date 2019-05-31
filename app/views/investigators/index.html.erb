@@ -2,8 +2,10 @@
 
 	<h1>Investigators</h1>
 
+	<h4>Investigators Count: <%= @investigators.count %></h4>
 
-	<% @investigators.take(25).each do |i| %>
+
+	<% @investigators.take(35).each do |i| %>
 		<%= link_to i.NAME_DEGREE, i %><br>
 		<%= i.ROLE %><br>
 		<%= i.FACILITY_NAME %><br><br>

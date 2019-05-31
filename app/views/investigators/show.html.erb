@@ -24,17 +24,18 @@
 </div>
 
 
+
 <h2>Study</h2>
   <% @investigator.studies.each do |study|%>
-  <%= study.BRIEF_TITLE %><br>
+  <%= link_to study.BRIEF_TITLE, study %><br>
   <%= study.BRIEF_SUMMARY %><br><br>
   <% end %>
 
-<h2>Sponsors</h2>
-<%= @investigator.test %>
-
-
 <h2>Interventions</h2>
+<%= @investigator.intervention_name %>
+
+
+
 
 </div>
 <!-- <a href="/investigators">All Investigators</a> -->

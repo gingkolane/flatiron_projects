@@ -10,18 +10,18 @@
 
   <h3>Condition</h3>
   <% @study.conditions.each do |condition| %><br>
-  <%= condition.CONDITION %><br>
+  <%= link_to condition.CONDITION, condition %><br>
   <% end %>
 
 <h3>Interventions</h3>
   <% @study.interventions.each do |intervention| %><br>
-  <%= intervention.INTERVENTION_NAME %><br>
+  <%= link_to intervention.INTERVENTION_NAME, intervention %><br>
   <%= intervention.DESCRIPTION %><br>
   <% end %> 
 
 <h3>Investigators</h3>
 <% @study.investigators.each do |investigator| %><br>
-  <%= investigator.NAME_DEGREE %><br>
+<%= link_to investigator.NAME_DEGREE, investigator %><br>
 <%= investigator.ROLE %><br>
 <%= investigator.FACILITY_NAME %><br>
 <%= investigator.CITY %><br>

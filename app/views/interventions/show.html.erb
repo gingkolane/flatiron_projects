@@ -6,6 +6,14 @@
 
 	<h2><%= @intervention.INTERVENTION_NAME %></h2><br>
 	<p class=description><%= @intervention.DESCRIPTION %><p>
+
+
+	<h2>Studies</h2>
+	<p><%= link_to @intervention.study_name, study_path(@intervention.studies.ids) %><p>
+
+	<h2>Conditions</h2>
+	<p><%= link_to @intervention.condition, condition_path(@intervention.find_condition) %></p>
+
 </div>
 
 

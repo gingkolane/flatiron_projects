@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :investigators
   resources :sponsors
 
+
 end

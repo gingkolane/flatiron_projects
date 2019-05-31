@@ -18,9 +18,29 @@ class Investigator < ApplicationRecord
     self.sponsors_array.map do |sponsor|
       sponsor.AGENCY
     end
-  end 
+  end
 
+  def find_study_id
+    self.studies[0].id
+  end
 
+  def find_study
+      Study.find(find_study_id)
+  end
+
+  def find_intervention
+    self.find_study.interventions
+  end
+
+  def intervention
+    self.find_intervention.map do |intervention|
+      intervention.INTERVENTION_NAME
+    end
+  end
+
+  def intervention_name
+    self.intervention.join(", ")
+  end
 
 
 

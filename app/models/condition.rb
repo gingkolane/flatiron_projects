@@ -1,20 +1,30 @@
 class Condition < ApplicationRecord
   has_and_belongs_to_many :studies
 
+  def find_studies_id
+    self.studies.ids
+  end
 
-  # def find_study_id
-  # 	StudyCondition.find_by(condition_id: find_condition).study_id
-  # end
 
-  # def find_study
-  # 	Study.find_by(study_id: find_study_id)
-  # end
+  def find_study
+    self.find_studies_id.map do |id|
+      Study.find(id)
+    end
+  end
 
-  # def study_title
-  # 	find_study.BRIEF_TITLE
-  # end
+  def intervention_array
+    self.find_study.map do |study|
+      study.interventions
+    end
+  end
 
-  # def study_summary
-  # 	find_study.BRIEF_SUMMARY
-  # end
+  def intervention
+    self.intervention_array.map do |interventions|
+      interventions.map do |intervention|
+        intervention.INTERVENTION_NAME
+      end
+    end
+  end
+
+
 end

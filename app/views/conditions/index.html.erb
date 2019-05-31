@@ -1,7 +1,9 @@
 <div class="index">
 <h1>Conditions</h1>
 
-<% @conditions.take(25).each do |condition| %>
+<h4>Conditions Count: <%= @conditions.count %></h4>
+
+<% @conditions.take(35).each do |condition| %>
 	<%= link_to condition.CONDITION, condition %><br>
 
 <% end %>

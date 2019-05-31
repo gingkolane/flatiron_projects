@@ -1,14 +1,10 @@
 <div class="show">
 
-<h1>Condition</h1>
+<h1><%= @condition.CONDITION %></h1>
 
-
-<%= @condition.CONDITION %><br>
-
-<h2>Study</h2>
-  <% @condition.studies.each do |study| %><br>
-    <%= study.BRIEF_TITLE %>
-    <br>
-    <%= study.BRIEF_SUMMARY %><br><br>
+<h2>Studies</h2>
+  <% @condition.studies.each do |study| %>
+    <h3>Title:</h3> <%= link_to study.BRIEF_TITLE, study %>
+    <h3>Summary:</h3> <%= study.BRIEF_SUMMARY %><br><br>
   <% end %>
 </div>
