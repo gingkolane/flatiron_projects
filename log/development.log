@@ -24065,3 +24065,153 @@ Processing by StudiesController#index as HTML
 Completed 200 OK in 131ms (Views: 121.1ms | ActiveRecord: 7.1ms)
 
 
+Started GET "/studies/1" for ::1 at 2019-05-31 13:31:13 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.4ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mCondition Load (1.8ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:12
+  [1m[36mIntervention Load (1.8ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:17
+  [1m[36mInvestigator Load (5.2ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators" INNER JOIN "investigators_studies" ON "investigators"."id" = "investigators_studies"."investigator_id" WHERE "investigators_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:23
+  Rendered studies/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 89ms (Views: 76.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/conditions/11" for ::1 at 2019-05-31 13:31:15 -0400
+Processing by ConditionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCondition Load (0.3ms)[0m  [1m[34mSELECT  "conditions".* FROM "conditions" WHERE "conditions"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/conditions_controller.rb:39
+  Rendering conditions/show.html.erb within layouts/application
+  [1m[36mStudy Load (1.5ms)[0m  [1m[34mSELECT "studies".* FROM "studies" INNER JOIN "conditions_studies" ON "studies"."id" = "conditions_studies"."study_id" WHERE "conditions_studies"."condition_id" = ?[0m  [["condition_id", 11]]
+  ↳ app/views/conditions/show.html.erb:6
+  Rendered conditions/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/studies/1" for ::1 at 2019-05-31 13:31:17 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mCondition Load (2.8ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:12
+  [1m[36mIntervention Load (1.1ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:17
+  [1m[36mInvestigator Load (3.3ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators" INNER JOIN "investigators_studies" ON "investigators"."id" = "investigators_studies"."investigator_id" WHERE "investigators_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:23
+  Rendered studies/show.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 82ms (Views: 69.3ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/interventions/2702" for ::1 at 2019-05-31 13:31:18 -0400
+Processing by InterventionsController#show as HTML
+  Parameters: {"id"=>"2702"}
+  [1m[36mIntervention Load (0.3ms)[0m  [1m[34mSELECT  "interventions".* FROM "interventions" WHERE "interventions"."id" = ? LIMIT ?[0m  [["id", 2702], ["LIMIT", 1]]
+  ↳ app/controllers/interventions_controller.rb:39
+  Rendering interventions/show.html.erb within layouts/application
+  [1m[36mStudy Load (1.0ms)[0m  [1m[34mSELECT "studies".* FROM "studies" INNER JOIN "interventions_studies" ON "studies"."id" = "interventions_studies"."study_id" WHERE "interventions_studies"."intervention_id" = ?[0m  [["intervention_id", 2702]]
+  ↳ app/models/intervention.rb:16
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/intervention.rb:20
+  [1m[36mCondition Load (1.1ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/models/intervention.rb:29
+  [1m[36mCACHE Study Load (0.0ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/intervention.rb:20
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "conditions"."id" FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/models/intervention.rb:24
+  Rendered interventions/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 65ms (Views: 58.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/studies/1%2F1311" for ::1 at 2019-05-31 13:31:20 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"1/1311"}
+  [1m[36mStudy Load (0.3ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mCondition Load (1.0ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:12
+  [1m[36mIntervention Load (1.1ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:17
+  [1m[36mInvestigator Load (5.2ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators" INNER JOIN "investigators_studies" ON "investigators"."id" = "investigators_studies"."investigator_id" WHERE "investigators_studies"."study_id" = ?[0m  [["study_id", 1]]
+  ↳ app/views/studies/show.html.erb:23
+  Rendered studies/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 80ms (Views: 67.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/investigators" for ::1 at 2019-05-31 13:31:22 -0400
+Processing by InvestigatorsController#index as HTML
+  Rendering investigators/index.html.erb within layouts/application
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "investigators"[0m
+  ↳ app/views/investigators/index.html.erb:5
+  [1m[36mInvestigator Load (1.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" LIMIT ?[0m  [["LIMIT", 35]]
+  ↳ app/views/investigators/index.html.erb:8
+  Rendered investigators/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 79ms (Views: 71.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/investigators/2" for ::1 at 2019-05-31 13:31:24 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInvestigator Load (0.4ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudy Load (5.3ms)[0m  [1m[34mSELECT "studies".* FROM "studies" INNER JOIN "investigators_studies" ON "studies"."id" = "investigators_studies"."study_id" WHERE "investigators_studies"."investigator_id" = ?[0m  [["investigator_id", 2]]
+  ↳ app/views/investigators/show.html.erb:29
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 911], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mIntervention Load (1.3ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 911]]
+  ↳ app/models/investigator.rb:36
+  Rendered investigators/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 66ms (Views: 53.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/studies/911" for ::1 at 2019-05-31 13:31:25 -0400
+Processing by StudiesController#show as HTML
+  Parameters: {"id"=>"911"}
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 911], ["LIMIT", 1]]
+  ↳ app/controllers/studies_controller.rb:39
+  Rendering studies/show.html.erb within layouts/application
+  [1m[36mCondition Load (1.1ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions" INNER JOIN "conditions_studies" ON "conditions"."id" = "conditions_studies"."condition_id" WHERE "conditions_studies"."study_id" = ?[0m  [["study_id", 911]]
+  ↳ app/views/studies/show.html.erb:12
+  [1m[36mIntervention Load (1.0ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 911]]
+  ↳ app/views/studies/show.html.erb:17
+  [1m[36mInvestigator Load (3.7ms)[0m  [1m[34mSELECT "investigators".* FROM "investigators" INNER JOIN "investigators_studies" ON "investigators"."id" = "investigators_studies"."investigator_id" WHERE "investigators_studies"."study_id" = ?[0m  [["study_id", 911]]
+  ↳ app/views/studies/show.html.erb:23
+  Rendered studies/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 72ms (Views: 63.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/investigators/7751" for ::1 at 2019-05-31 13:31:29 -0400
+Processing by InvestigatorsController#show as HTML
+  Parameters: {"id"=>"7751"}
+  [1m[36mInvestigator Load (0.2ms)[0m  [1m[34mSELECT  "investigators".* FROM "investigators" WHERE "investigators"."id" = ? LIMIT ?[0m  [["id", 7751], ["LIMIT", 1]]
+  ↳ app/controllers/investigators_controller.rb:39
+  Rendering investigators/show.html.erb within layouts/application
+  [1m[36mStudy Load (3.4ms)[0m  [1m[34mSELECT "studies".* FROM "studies" INNER JOIN "investigators_studies" ON "studies"."id" = "investigators_studies"."study_id" WHERE "investigators_studies"."investigator_id" = ?[0m  [["investigator_id", 7751]]
+  ↳ app/views/investigators/show.html.erb:29
+  [1m[36mStudy Load (0.2ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" WHERE "studies"."id" = ? LIMIT ?[0m  [["id", 911], ["LIMIT", 1]]
+  ↳ app/models/investigator.rb:28
+  [1m[36mIntervention Load (1.6ms)[0m  [1m[34mSELECT "interventions".* FROM "interventions" INNER JOIN "interventions_studies" ON "interventions"."id" = "interventions_studies"."intervention_id" WHERE "interventions_studies"."study_id" = ?[0m  [["study_id", 911]]
+  ↳ app/models/investigator.rb:36
+  Rendered investigators/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 74ms (Views: 64.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/studies" for ::1 at 2019-05-31 13:31:31 -0400
+Processing by StudiesController#index as HTML
+  Rendering studies/index.html.erb within layouts/application
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "studies"[0m
+  ↳ app/views/studies/index.html.erb:5
+  [1m[36mStudy Load (1.6ms)[0m  [1m[34mSELECT  "studies".* FROM "studies" LIMIT ?[0m  [["LIMIT", 35]]
+  ↳ app/views/studies/index.html.erb:7
+  Rendered studies/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 85ms (Views: 71.1ms | ActiveRecord: 12.0ms)
+
+
