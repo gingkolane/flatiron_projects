@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agency:</strong>
+  <%= @sponsor.AGENCY %>
+</p>
+
+<p>
+  <strong>Sponsor type:</strong>
+  <%= @sponsor.SPONSOR_TYPE %>
+</p>
+
+<p>
+  <strong>Agency class:</strong>
+  <%= @sponsor.AGENCY_CLASS %>
+</p>
+
+<p>
+  <strong>Nct id:</strong>
+  <%= @sponsor.NCT_ID %>
+</p>
+
+<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', sponsors_path %>
