@@ -1,0 +1,102 @@
+<%= form_with(model: study, local: true) do |form| %>
+  <% if study.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(study.errors.count, "error") %> prohibited this study from being saved:</h2>
+
+      <ul>
+      <% study.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :NCT_ID %>
+    <%= form.text_field :NCT_ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BRIEF_TITLE %>
+    <%= form.text_field :BRIEF_TITLE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BRIEF_SUMMARY %>
+    <%= form.text_field :BRIEF_SUMMARY %>
+  </div>
+
+  <div class="field">
+    <%= form.label :OVERALL_STATUS %>
+    <%= form.text_field :OVERALL_STATUS %>
+  </div>
+
+  <div class="field">
+    <%= form.label :START_DATE %>
+    <%= form.text_field :START_DATE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :START_DATE_TYPE %>
+    <%= form.text_field :START_DATE_TYPE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :COMPLETION_DATE %>
+    <%= form.text_field :COMPLETION_DATE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :COMPLETION_DATE_TYPE %>
+    <%= form.text_field :COMPLETION_DATE_TYPE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PHASE %>
+    <%= form.text_field :PHASE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :STUDY_TYPE %>
+    <%= form.text_field :STUDY_TYPE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ENROLLMENT_TYPE %>
+    <%= form.text_field :ENROLLMENT_TYPE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ENROLLMENT %>
+    <%= form.text_field :ENROLLMENT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CRITERIA %>
+    <%= form.text_field :CRITERIA %>
+  </div>
+
+  <div class="field">
+    <%= form.label :GENDER %>
+    <%= form.text_field :GENDER %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MINIMUM_AGE %>
+    <%= form.text_field :MINIMUM_AGE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MAXIMUM_AGE %>
+    <%= form.text_field :MAXIMUM_AGE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :URL %>
+    <%= form.text_field :URL %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

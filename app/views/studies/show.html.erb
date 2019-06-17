@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nct id:</strong>
+  <%= @study.NCT_ID %>
+</p>
+
+<p>
+  <strong>Brief title:</strong>
+  <%= @study.BRIEF_TITLE %>
+</p>
+
+<p>
+  <strong>Brief summary:</strong>
+  <%= @study.BRIEF_SUMMARY %>
+</p>
+
+<p>
+  <strong>Overall status:</strong>
+  <%= @study.OVERALL_STATUS %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @study.START_DATE %>
+</p>
+
+<p>
+  <strong>Start date type:</strong>
+  <%= @study.START_DATE_TYPE %>
+</p>
+
+<p>
+  <strong>Completion date:</strong>
+  <%= @study.COMPLETION_DATE %>
+</p>
+
+<p>
+  <strong>Completion date type:</strong>
+  <%= @study.COMPLETION_DATE_TYPE %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @study.PHASE %>
+</p>
+
+<p>
+  <strong>Study type:</strong>
+  <%= @study.STUDY_TYPE %>
+</p>
+
+<p>
+  <strong>Enrollment type:</strong>
+  <%= @study.ENROLLMENT_TYPE %>
+</p>
+
+<p>
+  <strong>Enrollment:</strong>
+  <%= @study.ENROLLMENT %>
+</p>
+
+<p>
+  <strong>Criteria:</strong>
+  <%= @study.CRITERIA %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @study.GENDER %>
+</p>
+
+<p>
+  <strong>Minimum age:</strong>
+  <%= @study.MINIMUM_AGE %>
+</p>
+
+<p>
+  <strong>Maximum age:</strong>
+  <%= @study.MAXIMUM_AGE %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @study.URL %>
+</p>
+
+<%= link_to 'Edit', edit_study_path(@study) %> |
+<%= link_to 'Back', studies_path %>
