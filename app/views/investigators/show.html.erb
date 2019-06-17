@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name degree:</strong>
+  <%= @investigator.NAME_DEGREE %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @investigator.ROLE %>
+</p>
+
+<p>
+  <strong>Facility name:</strong>
+  <%= @investigator.FACILITY_NAME %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @investigator.CITY %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @investigator.STATE %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @investigator.ZIP %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @investigator.COUNTRY %>
+</p>
+
+<%= link_to 'Edit', edit_investigator_path(@investigator) %> |
+<%= link_to 'Back', investigators_path %>
