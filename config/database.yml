@@ -14,12 +14,13 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: Dumbo042219!
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: Mod2Mysql_development
+  host: localhost
+  database: trialdata
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -52,3 +53,6 @@ production:
   database: Mod2Mysql_production
   username: Mod2Mysql
   password: <%= ENV['MOD2MYSQL_DATABASE_PASSWORD'] %>
+
+
+# https://stackoverflow.com/questions/3257024/how-do-i-connect-a-mysql-database-file-to-a-local-ruby-on-rails-application
