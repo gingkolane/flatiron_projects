@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Intervention name:</strong>
+  <%= @intervention.INTERVENTION_NAME %>
+</p>
+
+<p>
+  <strong>Intervention type:</strong>
+  <%= @intervention.INTERVENTION_TYPE %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @intervention.DESCRIPTION %>
+</p>
+
+<%= link_to 'Edit', edit_intervention_path(@intervention) %> |
+<%= link_to 'Back', interventions_path %>
