@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_224045) do
+ActiveRecord::Schema.define(version: 2019_06_18_195632) do
 
   create_table "cars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -106,8 +106,6 @@ ActiveRecord::Schema.define(version: 2019_06_17_224045) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "username"
-    t.string "password"
-    t.string "password_confirm"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
