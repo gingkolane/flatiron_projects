@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :sponsors
   resources :investigators
   resources :studies
+
+  delete "/logout", to: "login#destroy"
   
   
 end

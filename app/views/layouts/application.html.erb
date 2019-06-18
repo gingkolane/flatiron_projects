@@ -12,6 +12,7 @@
   <body>
   <% if @logged_in %>
      <p>Logged in as: <%= @current_user.username %></p>
+     <%= button_to "Log out #{@current_user.username}", "/logout", method: :delete%>
   <% else  %>
     <%= link_to "Log in here", new_login_path %>
     <%= link_to "Create a registration", new_user_path %>
