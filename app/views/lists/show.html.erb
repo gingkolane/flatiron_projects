@@ -7,8 +7,13 @@
 
 <p>
   <strong>User:</strong>
-  <%= @list.user %>
+  <%= @list.user.name %>
 </p>
+
+<ul>
+  <% @list.investigators.each do |investigator| %>
+  <li><%= investigator.NAME_DEGREE %></li>
+  <% end %>
 
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

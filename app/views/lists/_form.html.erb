@@ -21,6 +21,12 @@
     <%= form.text_field :user_id %>
   </div>
 
+  <div class="field">
+<%= form_for @investigator do |form| %>
+  <%= form.collection_check_boxes :investigator_id, Investigator.all, :id, :NAME_DEGREE%>
+  <% end %>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
