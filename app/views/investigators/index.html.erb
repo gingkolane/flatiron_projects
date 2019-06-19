@@ -25,19 +25,16 @@
   </thead>
 
   <%# form_for @mylist do |f| %>
-  <li><%# f.collection_check_boxes :investigator_ids, @investigators, :id, :NAME_DEGREE %></li>
+  <%# f.collection_check_boxes :investigator_ids, @investigators, :id, :NAME_DEGREE %>
   <%# f.submit%>
 <%# end  %>
 
 
 
   <tbody>
-<<<<<<< HEAD
-    <% @investigators.first(50).each do |investigator| %>
-=======
-    <% @investigators.each do |investigator| %>
 
->>>>>>> bootstrap
+    <% @investigators.first(50).each do |investigator| %>
+
       <tr>
        <!-- <td><input type="checkbox" id="investigator_id" name="#{investigator.id}"></td> -->
         <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
@@ -48,7 +45,7 @@
         <td><%= investigator.ZIP %></td>
         <td><%= investigator.COUNTRY %></td>
         <%= form_for @list do |f| %>
-        <td><%= f.collection_select :list_id, List.all, :id, :name %></td>
+        <td><%= f.collection_select :id, List.all, :id, :name %></td>
         <% end %>
         <td><%= link_to 'Show', investigator %></td>
         <td><%= link_to 'Edit', edit_investigator_path(investigator) %></td>

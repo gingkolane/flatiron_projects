@@ -11,13 +11,13 @@ class ListsController < ApplicationController
   # GET /lists/1.json
   def show
     @list = List.find(params[:id])
-    @list.investigators 
+    @list.investigators
   end
 
   # GET /lists/new
   def new
     @list = List.new
-    @investigators = Investigator.where(CITY: "New York")
+    # @investigators = Investigator.where(CITY: "New York")
   end
 
   # GET /lists/1/edit
@@ -28,11 +28,8 @@ class ListsController < ApplicationController
   # POST /lists.json
   def create
     # create a new list with a list name and a user_id
-    byebug
-    @list = List.new(list_params)
 
-    @list = List.create(name: list_params[:name], user_id: @current_user.id )
-byebug
+    @list = List.create(name: list_params[:name], user_id: @current_user.id)
     # create investigator_lists with this @list.id
     @investigators = Investigator.where(CITY: "New York").first(10)
     # @investigators = @current_user.lists.second.investigators
@@ -43,7 +40,7 @@ byebug
     end
 
     redirect_to @list,  notice: "#{@list.name} was successfully created."
-  end 
+  end
 
 
   # PATCH/PUT /lists/1
@@ -65,7 +62,7 @@ byebug
 
 
   # def add_to_list
-  # end 
+  # end
 
   # DELETE /lists/1
   # DELETE /lists/1.json

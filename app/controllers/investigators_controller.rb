@@ -6,7 +6,7 @@ class InvestigatorsController < ApplicationController
 
 
   def index
-    @mylist = @current_user.lists.new
+    @list = @current_user.lists.new
     if params[:search]
       @investigators = Investigator.where("NAME_DEGREE like ?", "%#{params[:search]}%")
       # @investigators = Investigator.where(name: params[:search])
