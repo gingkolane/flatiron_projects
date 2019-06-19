@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag "/investigators", method: "GET" do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <h1>Investigators</h1>
 
-<%= form_tag "/" do %>
-<%= label_field_tag :q %>
-<%= text_field_tag :q %>
-<% end %>
+
+ <%= form_tag "/lists" do %>
 
 <table>
   <thead>
@@ -21,9 +24,23 @@
     </tr>
   </thead>
 
+  <%# form_for @mylist do |f| %>
+  <li><%# f.collection_check_boxes :investigator_ids, @investigators, :id, :NAME_DEGREE %></li>
+  <%# f.submit%>
+<%# end  %>
+
+
+
   <tbody>
+<<<<<<< HEAD
     <% @investigators.first(50).each do |investigator| %>
+=======
+    <% @investigators.each do |investigator| %>
+
+>>>>>>> bootstrap
       <tr>
+       <!-- <td><input type="checkbox" id="investigator_id" name="#{investigator.id}"></td> -->
+        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
         <td><%= investigator.NAME_DEGREE %></td>
         <td><%= investigator.FACILITY_NAME %></td>
         <td><%= investigator.CITY %></td>
@@ -43,4 +60,6 @@
 
 <br>
 
+<%= submit_tag "Create A List" %>
+<% end %>
 <%= link_to 'New Investigator', new_investigator_path %>

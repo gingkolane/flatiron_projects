@@ -3,9 +3,16 @@ class InvestigatorsController < ApplicationController
 
   # GET /investigators
   # GET /investigators.json
+
+
   def index
-    @investigators = Investigator.all
-    @list = List.find_by(user_id: @current_user.id)
+    @mylist = @current_user.lists.new
+    if params[:search]
+      @investigators = Investigator.where("NAME_DEGREE like ?", "%#{params[:search]}%")
+      # @investigators = Investigator.where(name: params[:search])
+    else
+      @investigators = Investigator.all.first(50)
+    end
   end
 
   # GET /investigators/1

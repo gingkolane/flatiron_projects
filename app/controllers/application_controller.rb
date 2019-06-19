@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
     end 
   end 
 
+  def search_investigators 
+    # create variable that stores search bar results
+    @investigators = Investigator.where(NAME_DEGREE like )
+  end 
+
   def logout
     session[:user_id] = nil
   end

@@ -28,6 +28,8 @@ class ListsController < ApplicationController
   # POST /lists.json
   def create
     # create a new list with a list name and a user_id
+    byebug
+    @list = List.new(list_params)
 
     @list = List.create(name: list_params[:name], user_id: @current_user.id )
 byebug

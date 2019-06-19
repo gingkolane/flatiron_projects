@@ -13,4 +13,8 @@ class User < ApplicationRecord
   #   BCrypt::Password.new(self.password_digest) == plain_text_password
   # end
 
+  # def show_me_all_my_investigators
+  #   Investigator.where(level > self.clearance_level)
+  # end
+
 end
