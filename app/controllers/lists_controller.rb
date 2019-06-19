@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :find_list, only: [:show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -10,11 +10,14 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @list = List.find(params[:id])
+    @list.investigators 
   end
 
   # GET /lists/new
   def new
     @list = List.new
+    @investigators = Investigator.where(CITY: "New York")
   end
 
   # GET /lists/1/edit
@@ -24,32 +27,43 @@ class ListsController < ApplicationController
   # POST /lists
   # POST /lists.json
   def create
-    @list = List.new(list_params)
+    # create a new list with a list name and a user_id
 
-    respond_to do |format|
-      if @list.save
-        format.html { redirect_to @list, notice: 'List was successfully created.' }
-        format.json { render :show, status: :created, location: @list }
-      else
-        format.html { render :new }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
+    @list = List.create(name: list_params[:name], user_id: @current_user.id )
+byebug
+    # create investigator_lists with this @list.id
+    @investigators = Investigator.where(CITY: "New York").first(10)
+    # @investigators = @current_user.lists.second.investigators
+
+    @investigators.each do |investigator|
+      # make one listitem each cycle
+      InvestigatorsList.create(list_id: @list.id, investigator_id: investigator.id)
     end
-  end
+
+    redirect_to @list,  notice: "#{@list.name} was successfully created."
+  end 
+
 
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
-    respond_to do |format|
-      if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
-        format.json { render :show, status: :ok, location: @list }
-      else
-        format.html { render :edit }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
-    end
+     List.find(name: @list.name)
+      @list.add_investigator
+
+    # respond_to do |format|
+    #   if @list.update(list_params)
+    #     format.html { redirect_to @list, notice: 'List was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @list }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @list.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
+
+
+  # def add_to_list
+  # end 
 
   # DELETE /lists/1
   # DELETE /lists/1.json
@@ -63,7 +77,7 @@ class ListsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_list
+    def find_list
       @list = List.find(params[:id])
     end
 

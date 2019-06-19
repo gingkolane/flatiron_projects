@@ -2,6 +2,11 @@
 
 <h1>Investigators</h1>
 
+<%= form_tag "/" do %>
+<%= label_field_tag :q %>
+<%= text_field_tag :q %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -17,15 +22,17 @@
   </thead>
 
   <tbody>
-    <% @investigators.each do |investigator| %>
+    <% @investigators.first(50).each do |investigator| %>
       <tr>
         <td><%= investigator.NAME_DEGREE %></td>
-        <td><%= investigator.ROLE %></td>
         <td><%= investigator.FACILITY_NAME %></td>
         <td><%= investigator.CITY %></td>
         <td><%= investigator.STATE %></td>
         <td><%= investigator.ZIP %></td>
         <td><%= investigator.COUNTRY %></td>
+        <%= form_for @list do |f| %>
+        <td><%= f.collection_select :list_id, List.all, :id, :name %></td>
+        <% end %>
         <td><%= link_to 'Show', investigator %></td>
         <td><%= link_to 'Edit', edit_investigator_path(investigator) %></td>
         <td><%= link_to 'Destroy', investigator, method: :delete, data: { confirm: 'Are you sure?' } %></td>

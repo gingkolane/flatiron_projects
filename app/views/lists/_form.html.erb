@@ -16,16 +16,6 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :investigator_id %>
-    <%= form.collection_check_boxes :investigator_id, @investigators, :id, :NAME_DEGREE%>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>

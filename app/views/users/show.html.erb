@@ -13,8 +13,23 @@
 </p>
 
 
+<h1>My lists:</h1>
+
+<% @user.lists.each do |list| %>
+
+  <h1><%= list.name %></h1> <br>
+
+  <% list.investigators.each do |investigator| %>
+    <li><%= investigator.NAME_DEGREE %> , 
+    <%= investigator.FACILITY_NAME %> , 
+    <%= investigator.CITY %>
+    </li>
+  <% end %>
+
+<% end %>
 
 
-<%= link_to "Create a new list", new_list_path %>
+<br>
+<%= link_to "Create a new list", new_list_path %> <br>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

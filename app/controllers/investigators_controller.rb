@@ -5,6 +5,7 @@ class InvestigatorsController < ApplicationController
   # GET /investigators.json
   def index
     @investigators = Investigator.all
+    @list = List.find_by(user_id: @current_user.id)
   end
 
   # GET /investigators/1
