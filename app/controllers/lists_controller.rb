@@ -24,6 +24,7 @@ class ListsController < ApplicationController
   # POST /lists
   # POST /lists.json
   def create
+    byebug
     @list = List.new(list_params)
 
     respond_to do |format|
