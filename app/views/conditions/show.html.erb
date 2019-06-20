@@ -4,6 +4,25 @@
   <strong>Condition:</strong>
   <%= @condition.CONDITION %>
 </p>
+<p> Research Doctors</p>
+<ul>
+<% @condition.investigators.each do |investigator| %>
+<li><%= link_to investigator.NAME_DEGREE, investigator %></li>
+<% end %>
+</ul>
+<br>
+<br>
+
+<p> Relevant Studies</p>
+<ul>
+<% @condition.studies.each do |study| %>
+<li><%= link_to study.BRIEF_TITLE, study %></li>
+<% end %>
+</ul>
+<br>
+<br>
+
+
 
 <%# list of studies %>
 <%# list of investigators  %>
