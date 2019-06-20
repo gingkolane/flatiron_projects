@@ -1,45 +1,39 @@
-<p id="notice"><%= notice %></p>
+<h1>Investigators</h1>
 
 <%= form_tag "/investigators", method: "GET" do %>
   <%= text_field_tag :search %>
   <%= submit_tag "Search" %>
 <% end %>
 
-<h1>Investigators</h1>
-
  <%= form_tag "/lists" do %>
 
 <table>
   <thead>
     <tr>
-      <th>Name degree</th>
-      <th>Role</th>
-      <th>Facility name</th>
+      <th> </th>
+      <th>Name</th>
+      <th>Specialty</th>
+      <th>Hospital Associated</th>
       <th>City</th>
       <th>State</th>
-      <th>Zip</th>
-      <th>Country</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-<%= submit_tag "Create A List" %>
-
-<%= text_field_tag("list[name]", params[:name]) %>
-
+    <%= submit_tag "Create a List" %> | 
+    <%= label_tag "list name" %>
+    <%= text_field_tag("list[name]", params[:name]) %>
 
     <% @investigators.first(50).each do |investigator| %>
-
       <tr>
         <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>       
-        
+      
         <td><%= link_to investigator.NAME_DEGREE, investigator %></td>
+        <td><%= investigator.specialty_diseases.first(5) %>
         <td><%= investigator.FACILITY_NAME %></td>
         <td><%= investigator.CITY %></td>
         <td><%= investigator.STATE %></td>
-        <td><%= investigator.ZIP %></td>
-        <td><%= investigator.COUNTRY %></td>
+
       </tr>
     <% end %>
   </tbody>
