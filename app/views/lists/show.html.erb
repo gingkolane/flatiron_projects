@@ -17,4 +17,4 @@
   <li><%= investigator.NAME_DEGREE %></li>
   <% end %>
   </ul>
-
+    <%= button_to 'Delete List', @list , method: :delete, data: { confirm: 'Are you sure?' } %>
