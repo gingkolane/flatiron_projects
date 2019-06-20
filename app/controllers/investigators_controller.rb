@@ -3,9 +3,10 @@ class InvestigatorsController < ApplicationController
 
   def index
     @list = @current_user.lists.new
-    if params[:search]
-      @investigators = Investigator.where("NAME_DEGREE like ?", "%#{params[:search]}%")
-      # @investigators = Investigator.where(name: params[:search])
+    if params[:search_by_name]
+      @investigators = Investigator.where("NAME_DEGREE like ?", "%#{params[:search_by_name]}%")
+    elsif params[:search_by_condition]
+      @investigators = Investigator.find_by_condition(params[:search_by_condition])
     else
       @investigators = Investigator.all.first(50)
     end

@@ -1,9 +1,17 @@
 <h1>Investigators</h1>
 
 <%= form_tag "/investigators", method: "GET" do %>
-  <%= text_field_tag :search %>
+
+  <%= label_tag :search_by_name %>
+  <%= text_field_tag :search_by_name %>
+
+  <%= label_tag :search_by_condition %>
+  <%= text_field_tag :search_by_condition %>
+
   <%= submit_tag "Search" %>
+
 <% end %>
+
 
  <%= form_tag "/lists" do %>
 
@@ -29,7 +37,7 @@
         <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
 
         <td><%= link_to investigator.NAME_DEGREE, investigator %></td>
-        <td><%= investigator.specialty_diseases.first(5) %>
+        <td><%= investigator.specialty_diseases %>
         <td><%= investigator.FACILITY_NAME %></td>
         <td><%= investigator.CITY %></td>
         <td><%= investigator.STATE %></td>
