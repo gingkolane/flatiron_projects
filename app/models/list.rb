@@ -12,6 +12,7 @@ class List < ApplicationRecord
   def US_doctor_list
     @lists = List.all
   end 
-
+ 
+  # def make_custom_list()
   
 end

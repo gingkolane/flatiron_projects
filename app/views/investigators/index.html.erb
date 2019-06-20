@@ -7,7 +7,6 @@
 
 <h1>Investigators</h1>
 
-
  <%= form_tag "/lists" do %>
 
 <table>
@@ -24,39 +23,26 @@
     </tr>
   </thead>
 
-  <%# form_for @mylist do |f| %>
-  <%# f.collection_check_boxes :investigator_ids, @investigators, :id, :NAME_DEGREE %>
-  <%# f.submit%>
-<%# end  %>
-
-
-
   <tbody>
+<%= submit_tag "Create A List" %>
+
+<%= text_field_tag("list[name]", params[:name]) %>
+
 
     <% @investigators.first(50).each do |investigator| %>
 
       <tr>
-       <!-- <td><input type="checkbox" id="investigator_id" name="#{investigator.id}"></td> -->
-        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
-        <td><%= investigator.NAME_DEGREE %></td>
+        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>       
+        
+        <td><%= link_to investigator.NAME_DEGREE, investigator %></td>
         <td><%= investigator.FACILITY_NAME %></td>
         <td><%= investigator.CITY %></td>
         <td><%= investigator.STATE %></td>
         <td><%= investigator.ZIP %></td>
         <td><%= investigator.COUNTRY %></td>
-        <%= form_for @list do |f| %>
-        <td><%= f.collection_select :id, List.all, :id, :name %></td>
-        <% end %>
-        <td><%= link_to 'Show', investigator %></td>
-        <td><%= link_to 'Edit', edit_investigator_path(investigator) %></td>
-        <td><%= link_to 'Destroy', investigator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= submit_tag "Create A List" %>
 <% end %>
-<%= link_to 'New Investigator', new_investigator_path %>
