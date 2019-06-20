@@ -1,5 +1,5 @@
 class ConditionsController < ApplicationController
-  before_action :set_condition, only: [:show, :edit, :update, :destroy]
+  before_action :set_condition, only: [:show]
 
   def index
     @conditions = Condition.all

@@ -14,7 +14,7 @@ class InvestigatorsController < ApplicationController
   def show
   end
 
-  private    
+  private
     def set_investigator
       @investigator = Investigator.find(params[:id])
     end

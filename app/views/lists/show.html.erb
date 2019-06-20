@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
 <p>
   <strong>Name:</strong>
   <%= @list.name %>
@@ -12,9 +10,12 @@
   <%= @list.user.name %>
 </p>
 
+<h3><%=@list.name%></h3>
 <ul>
   <% @list.investigators.each do |investigator| %>
-  <li><%= investigator.NAME_DEGREE %></li>
+  <li><%= link_to investigator.NAME_DEGREE, investigator %></li>
   <% end %>
   </ul>
-
+  <%= link_to 'Edit', edit_list_path(@list) %> |
+  <%= link_to 'Back', lists_path %>
+    <%= button_to 'Delete List', @list , method: :delete, data: { confirm: 'Are you sure?' } %>

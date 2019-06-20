@@ -7,7 +7,7 @@
 
  <%= form_tag "/lists" do %>
 
-<table>
+ <table class="table table-striped">
   <thead>
     <tr>
       <th> </th>
@@ -20,14 +20,14 @@
   </thead>
 
   <tbody>
-    <%= submit_tag "Create a List" %> | 
+    <%= submit_tag "Create a List" %> |
     <%= label_tag "list name" %>
     <%= text_field_tag("list[name]", params[:name]) %>
 
     <% @investigators.first(50).each do |investigator| %>
       <tr>
-        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>       
-      
+        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
+
         <td><%= link_to investigator.NAME_DEGREE, investigator %></td>
         <td><%= investigator.specialty_diseases.first(5) %>
         <td><%= investigator.FACILITY_NAME %></td>
