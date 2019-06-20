@@ -37,7 +37,7 @@
 
 <p><strong>Specialties:</strong></p>
   <ul><% @investigator.conditions.each do |condition|%>
-  <li><%= condition.CONDITION %></li>
+  <li><%= link_to condition.CONDITION, condition %></li>
   <% end %>
 </ul>
 

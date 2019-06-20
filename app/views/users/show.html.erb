@@ -17,10 +17,9 @@
 
 <% @user.lists.each do |list| %>
 
-  <h1><%= list.name %></h1> <br>
-
+  <h4><%= list.name %></h4> <br>
   <% list.investigators.each do |investigator| %>
-    <li><%= investigator.NAME_DEGREE %> ,
+    <li><%= link_to investigator.NAME_DEGREE, investigator%> ,
     <%= investigator.FACILITY_NAME %> ,
     <%= investigator.CITY %>
     </li>
