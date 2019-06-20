@@ -41,6 +41,18 @@
   <% end %>
 </ul>
 
+<p><strong>Studies:</strong></p>
+  <ul><% @investigator.studies.each do |study|%>
+  <li><%= link_to study.BRIEF_TITLE, study %></li>
+  <% end %>
+</ul>
+
+<p><strong>Pharmaceutical Companies Associated With:</strong></p>
+  <ul><% @investigator.sponsors.each do |sponsor|%>
+  <li><%= link_to sponsor.AGENCY, sponsor %></li>
+  <% end %>
+</ul>
+
 <%#= button_to 'Add to list', new_list_path, method: :get%>
 <%= link_to 'Edit', edit_investigator_path(@investigator) %> |
 <%= link_to 'Back', investigators_path %>

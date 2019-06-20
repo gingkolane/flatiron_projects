@@ -6,7 +6,7 @@
 </p>
 <p> Research Doctors</p>
 <ul>
-<% @condition.investigators.each do |investigator| %>
+<% @condition.investigators.first(15).each do |investigator| %>
 <li><%= link_to investigator.NAME_DEGREE, investigator %></li>
 <% end %>
 </ul>
@@ -15,7 +15,7 @@
 
 <p> Relevant Studies</p>
 <ul>
-<% @condition.studies.each do |study| %>
+<% @condition.studies.first(15).each do |study| %>
 <li><%= link_to study.BRIEF_TITLE, study %></li>
 <% end %>
 </ul>
@@ -24,7 +24,7 @@
 
 <p> Helpful Interventions</p>
 <ul>
-<% @condition.interventions.each do |intervention| %>
+<% @condition.interventions.first(15).each do |intervention| %>
 <li><%= link_to intervention.INTERVENTION_NAME, intervention %></li>
 <% end %>
 </ul>
