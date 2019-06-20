@@ -15,12 +15,9 @@
   <tbody>
     <% @interventions.each do |intervention| %>
       <tr>
-        <td><%= intervention.INTERVENTION_NAME %></td>
+        <td><%= link_to intervention.INTERVENTION_NAME, intervention %></td>
         <td><%= intervention.INTERVENTION_TYPE %></td>
         <td><%= intervention.DESCRIPTION %></td>
-        <td><%= link_to 'Show', intervention %></td>
-        <td><%= link_to 'Edit', edit_intervention_path(intervention) %></td>
-        <td><%= link_to 'Destroy', intervention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +25,3 @@
 
 <br>
 
-<%= link_to 'New Intervention', new_intervention_path %>

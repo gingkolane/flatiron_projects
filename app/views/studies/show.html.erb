@@ -82,8 +82,7 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @study.URL %>
+  <%= link_to "Source URL", @study.URL %>
 </p>
 
-<%= link_to 'Edit', edit_study_path(@study) %> |
 <%= link_to 'Back', studies_path %>

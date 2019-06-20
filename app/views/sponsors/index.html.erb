@@ -8,7 +8,6 @@
       <th>Agency</th>
       <th>Sponsor type</th>
       <th>Agency class</th>
-      <th>Nct id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +15,9 @@
   <tbody>
     <% @sponsors.each do |sponsor| %>
       <tr>
-        <td><%= sponsor.AGENCY %></td>
+        <td><%= link_to sponsor.AGENCY, sponsor %></td>
         <td><%= sponsor.SPONSOR_TYPE %></td>
         <td><%= sponsor.AGENCY_CLASS %></td>
-        <td><%= sponsor.NCT_ID %></td>
-        <td><%= link_to 'Show', sponsor %></td>
-        <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
-        <td><%= link_to 'Destroy', sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
