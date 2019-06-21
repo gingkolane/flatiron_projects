@@ -15,14 +15,47 @@
   </head>
 
   <body>
-  <% if @logged_in %>
-     <p>Logged in as: <%= link_to @current_user.username, @current_user %></p>
-     <%= button_to "Log out #{@current_user.username}", "/logout", method: :delete%>
-  <% else  %>
-    <%= link_to "Log in here", new_login_path %>
-    <%= link_to "Create a registration", new_user_path %>
-  <% end  %>
+    <!--nav bar-->
+      <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+  </div>
+    <!--nav bar-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Doctors</a>
+          <a class="navbar-brand" href="/">Diseases</a>
+          <a class="navbar-brand" href="/">Treatments</a>
+          <a class="navbar-brand" href="/">Studies</a>
+          <a class="navbar-brand" href="/">Pharmaceutical companies</a>
+        </div>
+      </div>
+    </nav>
+    <!--nav bar-->
 
-    <%= yield %>
+    <div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <h3>Tealeaf Academy Todo</h3>
+        </div>
+        <div class="col-xs-9">
+
+            <!--Login status bar-->
+            <% if @logged_in %>
+            <p>Logged in as: <%= link_to @current_user.username, @current_user %></p>
+            <%= button_to "Log out #{@current_user.username}", "/logout", method: :delete%>
+            <% else  %>
+            <%= link_to "Log in here", new_login_path %>
+            <%= link_to "Create a registration", new_user_path %>
+            <% end  %>
+            <!--Login status bar-->
+
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

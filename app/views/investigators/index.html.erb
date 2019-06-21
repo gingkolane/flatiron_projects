@@ -1,15 +1,15 @@
 <h1>Investigators</h1>
 
 <%= form_tag "/investigators", method: "GET" do %>
-
   <%= label_tag :search_by_name %>
-  <%= text_field_tag :search_by_name %>
+  <%= text_field_tag :search_by_name, params[:search_by_name] %>
 
   <%= label_tag :search_by_condition %>
-  <%= text_field_tag :search_by_condition %>
+  <%= text_field_tag :search_by_condition, params[:search_by_condition] %>
 
+  <%= label_tag :search_by_city %>
+  <%= text_field_tag :search_by_city, params[:search_by_city] %>
   <%= submit_tag "Search" %>
-
 <% end %>
 
 
