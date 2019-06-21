@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
 
   def index
     @users = User.all
@@ -14,7 +15,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to user_path(@user)
+    if @user.valid?
+ 
+      redirect_to user_path(@user)
+    else  
+      redirect_to new_user_path
+    end
   end
 
   def edit

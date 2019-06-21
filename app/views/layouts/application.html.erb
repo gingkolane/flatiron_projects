@@ -15,34 +15,23 @@
   </head>
 
   <body>
-    <!--nav bar-->
-      <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-  </div>
-    <!--nav bar-->
+
+    <!--top nav bar-->
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Doctors</a>
-          <a class="navbar-brand" href="/">Diseases</a>
-          <a class="navbar-brand" href="/">Treatments</a>
-          <a class="navbar-brand" href="/">Studies</a>
-          <a class="navbar-brand" href="/">Pharmaceutical companies</a>
-        </div>
-      </div>
-    </nav>
-    <!--nav bar-->
+        <div class="row">
 
-    <div id="main-container" class="container">
-      <div class="row">
-        <div class="col-xs-3">
-          <h3>Tealeaf Academy Todo</h3>
-        </div>
-        <div class="col-xs-9">
+          <div class="col-xs-10">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/investigators">Doctors</a>
+              <a class="navbar-brand" href="/conditions">Conditions</a>
+              <a class="navbar-brand" href="/interventions">Treatments</a>
+              <a class="navbar-brand" href="/studies">Studies</a>
+              <a class="navbar-brand" href="/sponsors">Companies</a>
+            </div>         
+          </div>
 
+          <div class="col-xs-2">
             <!--Login status bar-->
             <% if @logged_in %>
             <p>Logged in as: <%= link_to @current_user.username, @current_user %></p>
@@ -52,7 +41,32 @@
             <%= link_to "Create a registration", new_user_path %>
             <% end  %>
             <!--Login status bar-->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--top nav bar-->
 
+    <div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-2">
+
+          <!-- Side navigation -->
+          <div class="sidenav">
+            <a href="/investigators/">My doctors</a>
+            <br>
+            <a href="/conditions">My conditions</a>
+            <br>
+             <a href="/interventions">My treatments</a>
+            <br>
+            <a href="/studies">My studies</a>
+            <br>
+            <a href="/sponsors">My pharmas</a>
+          </div>
+          <!-- Side navigation -->
+
+        </div>
+        <div class="col-xs-10">
           <%= yield %>
         </div>
       </div>

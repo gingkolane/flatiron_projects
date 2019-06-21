@@ -13,9 +13,9 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 
 # Misc required gems for bootstrap theme
-gem 'popper_js', '~> 1.14.5'
-gem "autoprefixer-rails"
-gem 'bootstrap', '~> 4.3.1'
+# gem 'popper_js', '~> 1.14.5'
+# gem "autoprefixer-rails"
+# gem 'bootstrap', '~> 4.3.1'
 #install jquery for datatable
 gem 'jquery-rails'
 # Use bootstrap theme
