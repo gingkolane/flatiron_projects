@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	
+	<div id="list-panel">
+		<ul id="list">
+		</ul>
+	</div>
+	
+	<div id="show-panel">
+	</div>
+	
+	<div id='form-container'>
+		<form id='survey-form'>
+			<label for="incompleteReason">Why did not complete? </label>
+				<input type="radio" name="incompleteReason" value="Too hard"> Too many labs today, don't have time for this.<br>
+				<input type="radio" name="incompleteReason" value="Spend a long time on it but cannot finish"> Spend a long time on it but cannot finish<br>
+				<input type="radio" name="incompleteReason" value="Bugs"> Bugs<br>  
+				<input type="text" name="incompleteReason" placeholder = "Others" value="" class="input-text">
+			<br>
+
+			<label for="issueType">This lab has issues, and </label>
+				<input type="radio" name="issueType" value="version"> I don't know what to do <br>
+
+				<input type="radio" name="issueType" value="gem version"> I know what is going on, but don't know how to fix it<br>
+				<input type="text" name="problemAnalysis" value="" class="input-text"> I think this is the problem <br>
+				
+				<input type="radio" name="issueType" value="test">I fixed it, and this is what I did<br>  
+				<input type="text" name="SuggestedFix" value="" class="input-text">
+			<br>
+
+			<input type="submit" name="submit" value="Submit" class="submit">
+		</form>
+	</div>
+	
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
