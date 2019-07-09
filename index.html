@@ -17,13 +17,27 @@
 	
 	<div id='form-container'>
 		<form id='survey-form'>
-			<label for="incompleteReason">Why did not complete? </label>
-				<input type="radio" name="incompleteReason" value="Too hard"> Too many labs today, don't have time for this.<br>
-				<input type="radio" name="incompleteReason" value="Spend a long time on it but cannot finish"> Spend a long time on it but cannot finish<br>
-				<input type="radio" name="incompleteReason" value="Bugs"> Bugs<br>  
-				<input type="text" name="incompleteReason" placeholder = "Others" value="" class="input-text">
-			<br>
+			<h2>Why did not complete? </h2>
+			<ul>
+				<li>
+					<label for="too-hard">Too many labs today, don't have time for this.</label>
+					<input id="too-hard" type="radio" name="incompleteReason" value="Too hard" /> 
+				</li>
+			
+				<li>
+					<label for="too-hard">Too many labs today, don't have time for this.</label>
+					<input type="radio" name="incompleteReason" value="Spend a long time on it but cannot finish"> 
+					Spend a long time on it but cannot finish<br>
+				</li>
 
+				<li>
+					<input type="radio" name="incompleteReason" value="Bugs"> 
+					Bugs<br>  
+					<input type="text" name="incompleteReason" placeholder = "Others" value="" class="input-text">
+					<textarea></textarea>
+				</li>
+			</ul>
+<h2></h2>
 			<label for="issueType">This lab has issues, and </label>
 				<input type="radio" name="issueType" value="version"> I don't know what to do <br>
 
@@ -31,7 +45,7 @@
 				<input type="text" name="problemAnalysis" value="" class="input-text"> I think this is the problem <br>
 				
 				<input type="radio" name="issueType" value="test">I fixed it, and this is what I did<br>  
-				<input type="text" name="SuggestedFix" value="" class="input-text">
+				<input type="text" name="suggestedFix" value="" class="input-text">
 			<br>
 
 			<input type="submit" name="submit" value="Submit" class="submit">
