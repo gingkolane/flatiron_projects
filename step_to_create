@@ -1,0 +1,24 @@
+1. rails new completion-api --api --database=postgresql
+
+2. upload the git repo in github, add .gitignore
+
+3. Follow instructions on learn.co to create a rails api backend
+
+  https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/rails-as-an-api/creating-a-rails-api-from-scratch
+
+  (update on cors from above: the file to modify is in config/initializers/cors.rb)
+
+4. Additional gems
+  - octokit for github api: in gemfile and config/application.rb
+    https://github.com/octokit/octokit.rb
+    Github API guide:
+    https://developer.github.com/v3/
+
+5. create resources
+rails g scaffold repo name github_repo_id:integer html_url --no-test-framework
+
+rails g scaffold user github_user_id:integer login avatar_url html_url  --no-test-framework
+
+rails g scaffold completion repo:references user:references --no-test-framework
+
+
