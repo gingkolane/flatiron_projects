@@ -20,35 +20,52 @@
 			<h2>Why did not complete? </h2>
 			<ul>
 				<li>
-					<label for="too-hard">Too many labs today, don't have time for this.</label>
-					<input id="too-hard" type="radio" name="incompleteReason" value="Too hard" /> 
+					<input id="incomplete-a" type="radio" name="incompleteReason" value="A" /> 
+					<label for="incomplete-a"> A. Too many labs today, don't have time to complete everthing, just want to browse through.</label>
 				</li>
 			
 				<li>
-					<label for="too-hard">Too many labs today, don't have time for this.</label>
-					<input type="radio" name="incompleteReason" value="Spend a long time on it but cannot finish"> 
-					Spend a long time on it but cannot finish<br>
+					<input id="incomplete-b" type="radio" name="incompleteReason" value="B"> 
+					<label for="incomplete-b"> B. Spent a long time on it but cannot finish...</label>
+					<br>
 				</li>
 
 				<li>
-					<input type="radio" name="incompleteReason" value="Bugs"> 
-					Bugs<br>  
-					<input type="text" name="incompleteReason" placeholder = "Others" value="" class="input-text">
-					<textarea></textarea>
+					<input id="incomplete-b" type="radio" name="incompleteReason" value="C"> 
+					<label for="incomplete-c"> C. I cannot finish it because there is a bug in this lab.</label>
+				</li>
+
+				<li>
+					<label for="incomplete-others"> Other reasons.</label>
+					<textarea type="text" name="incompleteReason" placeholder = "Others" value="" class="input-text" ></textarea>
 				</li>
 			</ul>
-<h2></h2>
-			<label for="issueType">This lab has issues, and </label>
-				<input type="radio" name="issueType" value="version"> I don't know what to do <br>
 
-				<input type="radio" name="issueType" value="gem version"> I know what is going on, but don't know how to fix it<br>
-				<input type="text" name="problemAnalysis" value="" class="input-text"> I think this is the problem <br>
-				
-				<input type="radio" name="issueType" value="test">I fixed it, and this is what I did<br>  
-				<input type="text" name="suggestedFix" value="" class="input-text">
-			<br>
+			<h2>This lab has bugs, and</h2>
+			<ul>
+				<li>
+					<input type="radio" name="issueType" value="A">
+					<label for="bug-a"> A. I don't know what to do. </label>
+				</li>
+
+				<li>
+					<input type="radio" name="issueType" value="B">
+					<label for="bug-b"> B. I know what is going on, but don't know how to fix it.</label>
+				</li>
+
+				<li>
+					<input type="radio" name="issueType" value="C">
+					<label for="bug-c"> C. I think this is the problem. </label>
+					<input type="text" name="problemAnalysis" value="" class="input-text">
+				</li>
+					<input type="radio" name="issueType" value="D"> 
+					<label for="bug-d"> D. I fixed it, and this is what I did. </label>
+					<input type="text" name="suggestedFix" value="" class="input-text">
+				</li>
+			</ul>
 
 			<input type="submit" name="submit" value="Submit" class="submit">
+
 		</form>
 	</div>
 	
