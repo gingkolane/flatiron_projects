@@ -97,16 +97,14 @@ completionContainerDivTag.addEventListener('click', function(event) {
     let repo_id = parseInt(event.currentTarget.parentElement.querySelector('#repo-container').dataset.repoId);
     let user_id = parseInt(event.currentTarget.parentElement.querySelector("#user-container").dataset.userId);
 
-    let newForm = createSurveyForm(repo_id, user_id);
-
-    completionContainerDivTag.append(newForm);
+    newForm = createSurveyForm(repo_id, user_id);
+    // why with let wrong?
+    // let newForm = createSurveyForm(repo_id, user_id);
 
     // create a new completion record on form information submission 
-
     newForm.addEventListener('submit', function (event) {
-  
       event.preventDefault();
-    
+      
       fetch("http://localhost:3000/completions", {
         method: 'POST',
         headers: {
@@ -124,12 +122,16 @@ completionContainerDivTag.addEventListener('click', function(event) {
         })
       });
 
+// ?????????????? why can't I call repo_id and user_id inside body?
+// as in repo_id: `${repo_id}` - inside function has access to outside variable
+
       //Reward bug fixing effort with Karma
       if (`${newForm.suggestedFix.value}` !== "") {
+        
         alert('Good deed! You just earned 1 karma!')
 
-        debugger
-        increaseKarmaCount();
+        increaseKarmaCount(user_id);
+
       } else {
         alert('Thank you for your input, good luck with your labs!')
       };
@@ -203,7 +205,7 @@ function createSurveyForm(repo_id, user_id) {
 
 
 //4. increase karma count
-function increaseKarmaCount() {
+function increaseKarmaCount(user_id) {
 
   userContainer = document.getElementById('user-container');
 
@@ -211,23 +213,23 @@ function increaseKarmaCount() {
   const karmaBtn = document.querySelector('#karma');
   let currentKarma = parseInt(karmaBtn.dataset.karma);
   let updatedKarma = currentKarma + 1;
-  debugger
+
   //update database
-  fetch(`http://localhost:3000/users/1`, {
+  fetch(`http://localhost:3000/users/${user_id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json', 
       'Accept': 'application/json'
     },
-    Body: JSON.stringify({
-      karma: `${updatedKarma}`
+    body: JSON.stringify({
+      "karma": `${updatedKarma}`
     })
+  });
 
   // update DOM
-  // karmaBtn.dataset.karma = updatedKarma
-  // karmaBtn.innerText = `${updatedKarma} Karma`
+  karmaBtn.dataset.karma = updatedKarma
+  karmaBtn.innerText = `${updatedKarma} Karma`
 
-  });
 };
 
 
