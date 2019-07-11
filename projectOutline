@@ -1,10 +1,7 @@
 
 Models: 
 
-repos, 
-issues, 
-students,
-TCF
+repos, users, completions(JT)
 
 
 completion: 
@@ -19,15 +16,6 @@ completion:
   2. There is also a pop up window.
   3. Add a suggestion for fix. Text box.
 
-- View for the completion status on TCF backend 
-  - Overall statistics: total people(students) downloaded, how many not-completed, total raised issues
-  - Reasons for incompletion: too hard, issues, don't have time to do 
-  - Broken reasons: 
-    broken but don't know what to do, how many
-    broken and think I know what is going on, how many
-    broken and offer a fix, how many
-  - Fix suggestions
-
 - Issue submission
   1. automatic submission based on preset statitics
   2. TCF can submit issues through the github issue link
@@ -38,10 +26,21 @@ completion:
 
 
 CRUD requirement: 
-create: incomplete reasons 
-Read: TCF read all and indivisual in another page.
+create: new completion
+Read:  Repo, all and indiviudal page.
 update: 
-  change status from imcomplete to complete
   Karma increase count
-
 delete: cannot delete
+
+
+Bonus: 
+popup window
+
+- View for the completion status on TCF backend 
+  - Overall statistics: total people(students) downloaded, how many not-completed, total raised issues
+  - Reasons for incompletion: too hard, issues, don't have time to do 
+  - Broken reasons: 
+    broken but don't know what to do, how many
+    broken and think I know what is going on, how many
+    broken and offer a fix, how many
+  - Fix suggestions
