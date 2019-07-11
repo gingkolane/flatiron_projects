@@ -21,6 +21,10 @@ class ReposController < ApplicationController
     render json: @repo
   end
 
+  def destroy
+    @repo.destroy
+  end 
+
   private
     def set_repo
       @repo = Repo.find(params[:id])
