@@ -1,11 +1,21 @@
-// 1. show repo title in list-panel
+// Define major html elements
+// List panel on the side to display all repos
+// Show panel has repo-container, user-container and completion-container
+
+const showPanelDiv = document.getElementById('show-panel');
+// const repoContainerDivTag = document.getElementById('repo-container');
+// const userContainerDivTag = document.getElementById('user-container');
+// const completionContainerDivTag = document.getElementById('completion-container');
+
+
+// Show repo titles in list-panel
 const repoListUlTag = document.getElementById('list');
 
 fetch('http://localhost:3000/repos')
 .then(response => response.json())
-.then(displayTitles)
+.then(displayRepoTitles)
 
-function displayTitles(repos) {
+function displayRepoTitles(repos) {
 
   repos.forEach(repo => {
 
@@ -20,14 +30,7 @@ function displayTitles(repos) {
   });
 };
 
-// Show panel has repo-container, user-container and completion-container
-
-const showPanelDiv = document.getElementById('show-panel');
-// const repoContainerDivTag = document.getElementById('repo-container');
-// const userContainerDivTag = document.getElementById('user-container');
-// const completionContainerDivTag = document.getElementById('completion-container');
-
-// 2. set eventListener on li in repolist, on click call displayOneRepo
+// Display single Repo in repo-container on click
 repoListUlTag.addEventListener('click', function(event) {
   
   if (event.target.tagName === "LI") {
@@ -37,11 +40,9 @@ repoListUlTag.addEventListener('click', function(event) {
     return fetch(`http://localhost:3000/repos/${id}`)
     .then(response => response.json())
     .then(displayOneRepo);
-
   };
 });
 
-// 2. show single repo view in repo-container
 function displayOneRepo(repo) {
 
   const repoContainerDivTag = document.getElementById('repo-container');
@@ -56,10 +57,11 @@ function displayOneRepo(repo) {
   return repoContainerDivTag;
 
 };
-// -------------------------------------------------
 
-//=================== Display user container ===================================
-// let's pretend that we are user_id of 1, 
+
+// Display one user information in user container 
+
+// fetch one user info - let's pretend that we are user_id of 1, 
 fetch('http://localhost:3000/users/1')
 .then(response => response.json())
 .then(displayOneUser);
@@ -81,7 +83,9 @@ function displayOneUser(user) {
   return userContainerDivTag;
 };
 
-//completionContainer after click, 
+
+//On click of Next Lesson button, completionContainer and survey form shows up
+ 
 const completionContainerDivTag = document.getElementById('completion-container');
 
 completionContainerDivTag.addEventListener('click', function(event) {
@@ -96,6 +100,8 @@ completionContainerDivTag.addEventListener('click', function(event) {
     let newForm = createSurveyForm(repo_id, user_id);
 
     completionContainerDivTag.append(newForm);
+
+    // create a new completion record on form information submission 
 
     newForm.addEventListener('submit', function (event) {
   
@@ -118,9 +124,17 @@ completionContainerDivTag.addEventListener('click', function(event) {
         })
       });
 
-      alert('Good deed! You just earned 1 karma!')
+      //Reward bug fixing effort with Karma
+      if (`${newForm.suggestedFix.value}` !== "") {
+        alert('Good deed! You just earned 1 karma!')
+
+        debugger
+        increaseKarmaCount();
+      } else {
+        alert('Thank you for your input, good luck with your labs!')
+      };
+    
       
-      increaseKarmaCount();
     });
   };
 });
@@ -192,14 +206,14 @@ function createSurveyForm(repo_id, user_id) {
 function increaseKarmaCount() {
 
   userContainer = document.getElementById('user-container');
-  
-  let user_id = parseInt(userContainer.dataset.userId);
+
+  // let user_id = parseInt(completionContainer.dataset.userId);
   const karmaBtn = document.querySelector('#karma');
   let currentKarma = parseInt(karmaBtn.dataset.karma);
   let updatedKarma = currentKarma + 1;
-
+  debugger
   //update database
-  fetch(`http://localhost:3000/users/${user_id}`, {
+  fetch(`http://localhost:3000/users/1`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json', 
@@ -215,3 +229,37 @@ function increaseKarmaCount() {
 
   });
 };
+
+
+
+// Extra =========================
+//use native nextLessonButton for a popup window
+
+function popUpWindow() {
+  // Get the modal
+  // var modal = document.getElementById("myModal");
+  var popUpModal = document.querySelector(".module .module--cloud");
+  // Get the button that opens the modal
+  var nextLessonBtn = document.querySelector('.status-alert__button--main');
+  // Get the <span> element that closes the modal
+  var closeX = document.querySelector('.js--close-modal');
+
+  // When the user clicks on the button, open the modal 
+  nextLessonBtn.onclick = function() {
+    popUpModal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  closeX.onclick = function() {
+    popUpModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == popUpModal) {
+      popUpModal.style.display = "none";
+    }
+  }
+}
+
+
