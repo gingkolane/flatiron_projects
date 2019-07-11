@@ -57,20 +57,6 @@ rails g migration AddColumnsToUser karma:integer
 11. Manually add data to three tables in Navicat.
 
 
-12.form token
-in index.html 
-  head:
-    <!-- csrf_meta_tags -->
-  body
-        <input type="hidden" name="authenticity_token" value="test_post_action_token">
-
-in index.js
-  fetch headers:
-
-
-In completion_controller
-
-  # skip_before_action :verify_authenticity_token
 
 
 Notes:

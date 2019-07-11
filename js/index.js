@@ -64,7 +64,7 @@ function displayOneRepo(repo) {
 // fetch one user info - let's pretend that we are user_id of 1, 
 fetch('http://localhost:3000/users/1')
 .then(response => response.json())
-.then(displayOneUser);
+.then(displayOneUserItems);
 
 function displayOneUser(user) {
 
@@ -79,23 +79,35 @@ function displayOneUser(user) {
     <br>
     <button id="karma" data-karma=${user.karma}> ${user.karma} Karma </button>
     `
-
   return userContainerDivTag;
 };
 
+function displayOneUserItems(user) {
+
+  const headerImgDivTag = document.querySelector('.image-frame--border-radius-full')
+  headerImgDivTag.innerHTML = `<img src=${user.avatar_url} alt="User avatar" class="site-header__user__thumbnail image-frame__image"/>`
+
+  const karmaDivTag = document.querySelector('div .site-header__karma')
+  karmaDivTag.innerHTML = `
+    <span class="site-header__karma__label">Karma</span>
+    <span class="site-header__karma__points" id="js--karma-points-count" data-karma=${user.karma}>${user.karma}</span>
+    `
+}
 
 //On click of Next Lesson button, completionContainer and survey form shows up
- 
 const completionContainerDivTag = document.getElementById('completion-container');
 
 completionContainerDivTag.addEventListener('click', function(event) {
-
+debugger
   if (event.target.id === "next-lesson") {
     //at the time of form creation, the repo_id and user_id are defined already, so pass in with the form creation
 
     // use event to traverse to different container for the ids
-    let repo_id = parseInt(event.currentTarget.parentElement.querySelector('#repo-container').dataset.repoId);
-    let user_id = parseInt(event.currentTarget.parentElement.querySelector("#user-container").dataset.userId);
+    // let repo_id = parseInt(event.currentTarget.parentElement.querySelector('#repo-container').dataset.repoId);
+    // let user_id = parseInt(event.currentTarget.parentElement.querySelector("#user-container").dataset.userId);
+
+    repo_id = parseInt(document.querySelector('#repo-container').dataset.repoId);
+    user_id = parseInt(document.querySelector('#user-container').dataset.userId);
 
     newForm = createSurveyForm(repo_id, user_id);
     // why with let wrong?
@@ -214,6 +226,8 @@ function increaseKarmaCount(user_id) {
   let currentKarma = parseInt(karmaBtn.dataset.karma);
   let updatedKarma = currentKarma + 1;
 
+
+
   //update database
   fetch(`http://localhost:3000/users/${user_id}`, {
     method: 'PATCH',
@@ -237,31 +251,52 @@ function increaseKarmaCount(user_id) {
 // Extra =========================
 //use native nextLessonButton for a popup window
 
-function popUpWindow() {
-  // Get the modal
-  // var modal = document.getElementById("myModal");
-  var popUpModal = document.querySelector(".module .module--cloud");
-  // Get the button that opens the modal
-  var nextLessonBtn = document.querySelector('.status-alert__button--main');
-  // Get the <span> element that closes the modal
-  var closeX = document.querySelector('.js--close-modal');
 
-  // When the user clicks on the button, open the modal 
-  nextLessonBtn.onclick = function() {
-    popUpModal.style.display = "block";
-  }
 
-  // When the user clicks on <span> (x), close the modal
-  closeX.onclick = function() {
-    popUpModal.style.display = "none";
-  }
+// const nextLessonDivTag = document.getElementById('next-lesson');
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == popUpModal) {
-      popUpModal.style.display = "none";
-    }
-  }
-}
+// nextLessonDivTag.addEventListener('click', openform)
+
+
+// function openForm() {
+//   document.getElementById("myForm").style.display = "block";
+// }
+
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }
+
+// <div id="next-lesson" class="status-alert__button--main button button--height-large button--corners-tight button--layout-block js--next-button">
+// Next Lesson
+// </div>
+
+// <button class="open-button" onclick="openForm()">Open Form</button>
+
+// function popUpWindow() {
+//   // Get the modal
+//   // var modal = document.getElementById("myModal");
+//   var popUpModal = document.querySelector(".module .module--cloud");
+//   // Get the button that opens the modal
+//   var nextLessonBtn = document.querySelector('.status-alert__button--main');
+//   // Get the <span> element that closes the modal
+//   var closeX = document.querySelector('.js--close-modal');
+
+//   // When the user clicks on the button, open the modal 
+//   nextLessonBtn.onclick = function() {
+//     popUpModal.style.display = "block";
+//   }
+
+//   // When the user clicks on <span> (x), close the modal
+//   closeX.onclick = function() {
+//     popUpModal.style.display = "none";
+//   }
+
+//   // When the user clicks anywhere outside of the modal, close it
+//   window.onclick = function(event) {
+//     if (event.target == popUpModal) {
+//       popUpModal.style.display = "none";
+//     }
+//   }
+// }
 
 
