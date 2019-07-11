@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_033613) do
+ActiveRecord::Schema.define(version: 2019_07_10_034953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 2019_07_09_033613) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "incompleteReason"
+    t.string "issueType"
+    t.string "problemAnalysis"
+    t.string "suggestedFix"
+    t.integer "status", default: 0
     t.index ["repo_id"], name: "index_completions_on_repo_id"
     t.index ["user_id"], name: "index_completions_on_user_id"
   end
@@ -39,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_033613) do
     t.string "html_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "karma", default: 0
   end
 
   add_foreign_key "completions", "repos"
