@@ -61,7 +61,13 @@ function displayOneRepo(repo) {
  
   delButton.addEventListener('click', function(){
     // delete from DOM
+    debugger
     event.target.parentElement.innerHTML = '';
+    
+    let id = parseInt(event.target.parentElement.dataset.repoId);
+
+    foundLi = document.getElementById('list').querySelector(`li[data-id='${id}']`)
+
     // delete in database
     fetch(`http://localhost:3000/repos/${repo.id}`, {
     method: 'DELETE'
