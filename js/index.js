@@ -20,7 +20,7 @@ function displayRepoTitles(repos) {
   repos.forEach(repo => {
 
     const titleLiTag = document.createElement('li');
-
+// debugger
     titleLiTag.innerText = repo.name;
     titleLiTag.dataset.id = repo.id;
 
@@ -228,8 +228,8 @@ function createSurveyForm(repo_id, user_id) {
 
 
     </ul>
-
-    <input type="submit" name="submit" value="Submit" data-repo-id=${repo_id} data-user-id=${user_id} class="submit">
+    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    <input type="submit" name="submit" value="Submit" data-repo-id=${repo_id} data-user-id=${user_id} class="submit btn">
     `
     return completionSurveyForm;
   }
