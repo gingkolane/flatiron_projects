@@ -2,6 +2,7 @@ class InvestigatorsController < ApplicationController
   before_action :set_investigator, only: [:show, :edit, :update, :destroy]
 
   def index
+    
     @list = @current_user.lists.new
     @investigators = Investigator.all
     if params[:search_by_condition] && params[:search_by_condition] != ""
