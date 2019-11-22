@@ -1,4 +1,4 @@
-Chloeclass CommandLineInterface
+class CommandLineInterface
 
 def self.start_cli
 system 'clear'
@@ -63,7 +63,7 @@ end
 		user_password = key(:password).mask('Create your password:'.bold, mask: pill)
 		$current_user = User.create(password: user_password, name: username, condition: "Healthy")
 			end
-		puts "You've successfully created a new profile, #{$current_user.name}!"
+		puts "You've successfully created a new profile, #$current_user.name}!"
 		sleep 3
 		new_day
 	end
@@ -133,7 +133,7 @@ end
 		# binding.pry
 		system 'clear'
 		doc = Nokogiri::HTML(open('https://www.accuweather.com/en/us/new-york-ny/10007/current-weather/349727'))
-		puts "Good morning, #{$current_user.name}! It is currently #{doc.css(".phrase").children.text.downcase} in NYC."
+		puts "Good morning, facility_array << $current_userame}! It is currently #{doc.css(".phrase").children.text.downcase} in NYC."
 		sleep 2
 		if $current_user.condition != "Healthy"
 			puts "You're still sick with #{$current_user.condition}. You should see a doctor!"
@@ -364,5 +364,82 @@ end
 		system 'clear'
 		abort
 	end
+
+	def self.display_study_table(studies)
+
+		# study_header is an array to keep all the keys we want from the study
+		study_header = [
+      "OFFICIAL_TITLE",
+    	"BRIEF_SUMMARY",
+			"PHASE",
+			"CRITERIA",
+			"MINIMUM_AGE",
+			"MAXIMUM_AGE",
+			"GENDER",
+			"START_DATE",
+			"TARGET_DURATION",
+			"PRIMARY_COMPLETION_DATE",
+			"COMPLETION_DATE",
+			"ENROLLMENT",
+			"ENROLLMENT_TYPE",
+			"NCT_ID"
+		]
+
+		# each study_array constains all the values in an array, studies_array is array of study_array
+		studies_array = studies.map do |study| 
+
+			study_array = []
+			study_array << study.OFFICIAL_TITLE
+      study_array << study.BRIEF_SUMMARY
+      study_array << study.PHASE
+      study_array << study.CRITERIA
+      study_array << study.MINIMUM_AGE
+      study_array << study.MAXIMUM_AGE
+      study_array << study.GENDER
+      study_array << study.START_DATE
+      study_array << study.TARGET_DURATION
+      study_array << study.PRIMARY_COMPLETION_DATE
+      study_array << study.COMPLETION_DATE
+      study_array << study.ENROLLMENT
+      study_array << study.ENROLLMENT_TYPE
+		  study_array << study.NCT_ID
+			end
+
+			# return studies_array
+			studies_array
+	
+			# create study_table
+		study_table = TTY::Table.new study_header, studies_array
+
+		# Calls render on the study_table
+		puts study_table.render(:ascii)
+		
+	end
+
+	def self.facility_table(facilities)
+
+    facility_header = [
+      'FACILITY_NAME',
+      'CITY',
+      'STATE',
+      'ZIP',
+      'COUNTRY'
+    ]
+
+		facilities_array = facilities.map do |facility| 
+			facility_array = []
+			facility_array << facility.FACILITY_NAME 
+			facility_array << facility.CITY 
+			facility_array << facility.STATE
+			facility_array << facility.ZIP
+			facility_array << facility.COUNTRY
+    end
+
+    facility_table = TTY::Table.new facility_header, facilities_array
+
+    facility_table.render(:ascii)
+  end
+
+
 
 end

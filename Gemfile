@@ -13,6 +13,7 @@ gem "artii"
 gem "colorize"
 gem "json"
 gem "nokogiri"
+gem "tty-table"  
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
