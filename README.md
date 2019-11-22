@@ -1,24 +1,19 @@
-# README
+# Doctor search app in rails 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the mod2 project for my study in flatiron bootcamp, it is a joint project with Rachel. It was the sequel to the What's up doc Micky and I did in mod2.
 
-Things you may want to cover:
+It is a rails app both frontend and backend, linked to a mysql database. 
 
-* Ruby version
+To run,
 
-* System dependencies
+1. start mysql server on localhost in terminal with: 
+mysql.server start
 
-* Configuration
+2. inside the project folder: 
+bundle install
+rails s
 
-* Database creation
+3. In a browser, go to http://localhost:3000/studies and login
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It was a pleasure working with Rachel. Eric our instructor and Greg our SEC helped us in many places. I am grateful for the chance to work with these great people. 
