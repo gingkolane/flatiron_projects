@@ -4,8 +4,13 @@ This is the mod2 project for my study in flatiron bootcamp, it is a joint projec
 
 It is a rails app both frontend and backend, linked to a mysql database. 
 
-To run,
+Main strength of this app include: 
+* 12 data modules, including a complicated list module
+* Advanced data linkage and logics
+* Advanced search function
+* semantic UI
 
+To run,
 1. start mysql server on localhost in terminal with: 
 mysql.server start
 
