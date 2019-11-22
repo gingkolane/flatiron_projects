@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<!-- saved from url=(0141)https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Learn.co issue automatic reporting feature</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link
+      href="http://flatironschool-static.s3.amazonaws.com/learn-social.png"
+      rel="image_src"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-57x57.png"
+      rel="apple-touch-icon"
+      sizes="57x57"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-60x60.png"
+      rel="apple-touch-icon"
+      sizes="60x60"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-76x76.png"
+      rel="apple-touch-icon"
+      sizes="76x76"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-114x114.png"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-120x120.png"
+      rel="apple-touch-icon"
+      sizes="120x120"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/apple-touch-icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/favicon-194x194.png"
+      rel="icon"
+      sizes="194x194"
+      type="image/png"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/favicon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/android-chrome-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/manifest.json"
+      rel="manifest"
+    />
+    <link
+      href="https://flatironschool-static.s3.amazonaws.com/favicons/favicon.ico"
+      rel="shortcut icon"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="./Learn - Toy Tale Challenge_files/application-e8f37f066cbf9167bd2faadcf990482921a3a55f86f262a83adb087514767a2d.css"
+    />
+    <!-- <script
+      src="./Learn - Toy Tale Challenge_files/inferredEvents.js"
+      async=""
+    ></script> -->
+    <!-- <script
+      src="./Learn - Toy Tale Challenge_files/1706055166302798"
+      async=""
+    ></script> -->
+    <!-- <script
+      async=""
+      src="./Learn - Toy Tale Challenge_files/fbevents.js"
+    ></script> -->
+    <!-- <script
+      src="./Learn - Toy Tale Challenge_files/fb.js"
+      type="text/javascript"
+      id="hs-ads-pixel-69751"
+      data-ads-portal-id="69751"
+      data-ads-env="prod"
+      data-loader="hs-scriptloader"
+      data-hsjs-portal="69751"
+      data-hsjs-env="prod"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/69751.js"
+      type="text/javascript"
+      id="hs-script-loader"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Learn - Toy Tale Challenge_files/f.txt"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Learn - Toy Tale Challenge_files/j4d6dyie"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Learn - Toy Tale Challenge_files/analytics.js"
+    ></script>
+    <script
+      id="hs-analytics"
+      src="./Learn - Toy Tale Challenge_files/69751(1).js"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./Learn - Toy Tale Challenge_files/analytics.min.js"
+    ></script> -->
+    <!-- <script type="text/javascript">
+        students_completed: [
+          {
+            learn_username: "NinjaEagle",
+            avatar_url: "https://avatars.githubusercontent.com/u/24487573",
+            id: 53496,
+            full_name: "Kevin Wang",
+            authenticated: true
+          },
+          {
+            learn_username: "occipudding",
+            avatar_url: "https://avatars.githubusercontent.com/u/13932244",
+            id: 251637,
+            full_name: "Joshua Suskin",
+            authenticated: true
+          },
+          {
+            learn_username: "reflective-mouse-3370",
+            avatar_url: "https://avatars.githubusercontent.com/u/48255813",
+            id: 425140,
+            full_name: "Joseph G Syverson",
+            authenticated: true
+          },
+          {
+            learn_username: "daniela_sandoval",
+            avatar_url:
+              "https://uploads-learn.s3.amazonaws.com/uploads/identities/learn_account/avatar/2495f7de-5158-45b2-8415-8f5f1927c69e/avatar.png",
+            id: 427435,
+            full_name: "Daniela Sandoval",
+            authenticated: true
+          },
+          {
+            learn_username: "tessneau",
+            avatar_url:
+              "https://uploads-learn.s3.amazonaws.com/uploads/identities/learn_account/avatar/22ccb752-c5e3-400d-8030-b0d2f726b892/avatar.jpeg",
+            id: 432113,
+            full_name: "Tess Neau",
+            authenticated: true
+          },
+          {
+            learn_username: "bustling-creator-2770",
+            avatar_url: "https://avatars.githubusercontent.com/u/49465527",
+            id: 442180,
+            full_name: "Fanqiang Meng",
+            authenticated: true
+          }
+        ],
+        students_completed_count: 6,
+        students_in_progress: [
+          {
+            learn_username: "tlam212",
+            avatar_url: "https://avatars.githubusercontent.com/u/37944382",
+            id: 264566,
+            full_name: "Toni Lamont",
+            authenticated: true
+          },
+          {
+            learn_username: "hilarious-device-4820",
+            avatar_url: "https://avatars.githubusercontent.com/u/12835014",
+            id: 300104,
+            full_name: "Stefanos Ugbit",
+            authenticated: true
+          },
+          {
+            learn_username: "oneilld136",
+            avatar_url: "https://avatars.githubusercontent.com/u/41308716",
+            id: 344496,
+            full_name: "Danielle O'Neill",
+            authenticated: true
+          },
+          {
+            learn_username: "binding-command-5862",
+            avatar_url: "https://avatars.githubusercontent.com/u/6547204",
+            id: 414313,
+            full_name: "Lorena Ramirez-Lopez",
+            authenticated: true
+          },
+          {
+            learn_username: "delightful-text-8732",
+            avatar_url: "https://avatars.githubusercontent.com/u/42975882",
+            id: 419040,
+            full_name: "Tom MacLean",
+            authenticated: true
+          },
+          {
+            learn_username: "yone920",
+            avatar_url:
+              "https://uploads-learn.s3.amazonaws.com/uploads/identities/learn_account/avatar/c8c6ee5d-2604-4fab-936b-e9ec066ccfce/avatar.jpeg",
+            id: 420497,
+            full_name: "Yonas Fesehatsion",
+            authenticated: true
+          }
+        ],
+        team_id: null,
+        team_user_ids: null,
+        track_completion_modal_data: null,
+        jupyter_in_browser_batch_setting: true,
+        canonical_github_url:
+          "https://github.com/learn-co-curriculum/jsdom-toy-tale",
+        deployed_github_url:
+          "https://github.com/learn-co-students/jsdom-toy-tale-dumbo-web-051319",
+        reference_deployed_repo: false
+      };
+      gon.active_lesson_events = {
+        intro_track_complete_cpb: null,
+        intro_track_complete_cpb_gsp: null
+      };
+      //]]>
+    </script> -->
+    <!-- <script
+      src="./Learn - Toy Tale Challenge_files/manifest-7a8bfec0b6132c8c489a.js"
+      media="all"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/commons-63d594adce86f98ce2e1.js"
+      media="all"
+    ></script>
+    <link
+      rel="stylesheet"
+      media="all"
+      href="./Learn - Toy Tale Challenge_files/commons-90954528ae6e269ee8d9f507745db64a.css"
+    />
+    <script
+      src="./Learn - Toy Tale Challenge_files/analytics-73d7ae2a7a3d2cbc2f7a.js"
+      media="all"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/jupyterNotebook-68048fa242c1c966b359.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/bootcampPrepApplicationModal-946114f01528e60a56ea.js"
+      media="all"
+      async="async"
+    <!-- ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/dataScienceApplicationModal-a9dfdd20c498e8948184.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/learn_v2-e1dc1bbbf3ceb54d1d61.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/flashMessage-e69fb8a3dbebefc213b3.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/featureTour-e87992e588e73d01872d.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/notifications-68caaee4ef02219f6330.js"
+      media="all"
+      async="async"
+    ></script>
+    <script
+      src="./Learn - Toy Tale Challenge_files/flatchat-student-bd8611f7b40b8ced3f7d.js"
+      media="all"
+      async="async"
+    ></script> -->
+    <script src="./Learn - Toy Tale Challenge_files/js"></script>
+    <style type="text/css"></style>
+    <script src="./Learn - Toy Tale Challenge_files/f(1).txt"></script>
+    <style id="fit-vids-style">
+      .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+      .fluid-width-video-wrapper iframe,
+      .fluid-width-video-wrapper object,
+      .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <!-- <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./Learn - Toy Tale Challenge_files/common.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./Learn - Toy Tale Challenge_files/util.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./Learn - Toy Tale Challenge_files/AuthenticationService.Authenticate"
+    ></script>  -->
+
+  </head>
+  <body
+    class="body--has-sidebar body--has-sidebar--collapsable body--has-splitscreen body--has-sidebar body--has-subheader"
+    id="js--region-body"
+  >
+    <header class="site-header flex-grid flex-grid--center-y">
+      <div class="flex-grid__item">
+        <div class="site-header__logo flex-grid flex-grid--center-both">
+          <div class="site-header__nav-item">
+            <a href="https://learn.co/"
+              ><svg
+                class="site-header__logo__icon"
+                data-animate="true"
+                height="32px"
+                viewBox="0 0 32 54"
+                width="32px"
+              >
+                <polygon
+                  class="site-header__logo__icon__shape"
+                  fill="none"
+                  points="0 26, 16 2, 16 52, 32 26"
+                  stroke="url(#logoGradient)"
+                  stroke-dasharray="164"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="3"
+                ></polygon>
+                <defs>
+                  <lineargradient id="logoGradient" x1="100%" y1="100%">
+                    <stop
+                      class="site-header__logo__icon__gradient--start"
+                      offset="0%"
+                      stop-color="#a9a9a9"
+                    ></stop>
+                    <stop
+                      class="site-header__logo__icon__gradient--stop"
+                      offset="100%"
+                      stop-color="#a9a9a9"
+                    ></stop>
+                  </lineargradient>
+                </defs></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grid__item flex-grid__item--grow-1">
+        <div class="flex-grid flex-grid--center-y">
+          <div id="js--region-track-nav">
+            <div>
+              <div class="menu-wrapper site-header__nav-item">
+                <div class="menu-wrapper__toggle">
+                  <a
+                    href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                    class="site-header__nav-item__heading"
+                    ><div
+                      class="media-block media-block--side-alt media-block--spacing-tightest media-block--vertical-align-top"
+                    >
+                      <div class="media-block__content">Curriculum</div>
+                      <div class="media-block__media">
+                        <svg
+                          class="inline-svg--rotatable"
+                          width="8"
+                          height="8"
+                          data-state="closed"
+                          role="img"
+                          data-testid="js-inline-svg"
+                        >
+                          <use
+                            href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--chevron"
+                            xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--chevron"
+                          ></use>
+                        </svg>
+                      </div></div
+                  ></a>
+                </div>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div id="js--assignments-menu">
+            <div
+              class="site-header__nav-item util--hide-small util--hide-mobile"
+            >
+              <a
+                class="site-header__nav-item__heading util--no-text-wrap"
+                href="https://learn.co/assignments"
+                >Assignments</a
+              >
+            </div>
+          </div>
+          <div class="site-header__nav-item">
+            <a
+              class="site-header__nav-item__heading"
+              href="http://help.learn.co/"
+              target="_blank"
+              rel="nofollow noopener"
+              >Help</a
+            >
+          </div>
+          <div id="js--nav-more-menu">
+            <div>
+              <div
+                class="menu-wrapper site-header__nav-item util--hide-medium util--hide-large"
+              >
+                <div class="menu-wrapper__toggle">
+                  <a
+                    href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                    class="site-header__nav-item__heading"
+                    ><svg
+                      width="16"
+                      height="4"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--horizontal-dots"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--horizontal-dots"
+                      ></use></svg
+                  ></a>
+                </div>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex-grid__item util--hide-mobile util--hide-small util--hide-medium"
+      >
+        <div class="flex-grid flex-grid--center-both">
+          <div class="flex-grid__item" title="Search">
+            <a
+              class="site-header__nav-item__heading"
+              href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+              ><div id="js--region-search">
+                <div class="site-header__search" data-state="closed">
+                  <form
+                    class="site-header__search__form js--query-form"
+                    action="https://learn.co/search/"
+                    data-action="toggle-site-search"
+                    data-state="closed"
+                  >
+                    <span
+                      class="twitter-typeahead"
+                      style="position: relative; display: inline-block;"
+                      ><input
+                        class="site-header__search__field js--query-field site-header__search__field--mask"
+                        type="text"
+                        readonly=""
+                        autocomplete="off"
+                        spellcheck="false"
+                        tabindex="-1"
+                        dir="ltr"
+                        style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1;"/><input
+                        class="site-header__search__field js--query-field"
+                        type="text"
+                        name="query"
+                        placeholder="Search"
+                        autocomplete="off"
+                        spellcheck="false"
+                        dir="auto"
+                        style="position: relative; vertical-align: top; background-color: transparent;"/>
+                      <pre
+                        aria-hidden="true"
+                        style="position: absolute; visibility: hidden; white-space: pre;"
+                      ></pre>
+                      <div
+                        class="site-header__search__field__menu menu"
+                        style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"
+                      >
+                        <div
+                          class="menu__list menu__list--full-width menu__list--full-width-global-search"
+                        ></div></div></span
+                    ><svg class="site-header__search__trigger">
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--search"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--search"
+                      ></use></svg
+                    ><input class="util--hide" type="submit" />
+                  </form>
+                </div></div
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grid__item">
+        <div class="flex-grid flex-grid--center-y">
+          <div
+            class="site-header__nav-item util--hide-mobile util--hide-small util--hide-medium"
+            title="Friends"
+          >
+            <a
+              class="site-header__nav-item__heading"
+              href="https://learn.co/friends"
+              ><svg class="inline-svg--fixed-size-medium">
+                <use
+                  href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--friends"
+                  xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--friends"
+                ></use></svg
+            ></a>
+          </div>
+          <div
+            class="site-header__dm site-header__nav-item"
+            title="Direct Messages"
+          >
+            <a
+              class="site-header__nav-item__heading"
+              href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+              ><div id="js--direct-messages-toggle">
+                <div title="Direct Messages">
+                  <div class="image-frame image-frame--has-badge">
+                    <svg
+                      class="image_frame__image inline-svg--fixed-size-medium"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--dm"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--dm"
+                      ></use>
+                    </svg>
+                  </div>
+                </div></div
+            ></a>
+            <div class="site-header__dm__toggle" id="js--dm-arrow"></div>
+          </div>
+
+          <div
+            class="site-header__karma site-header__nav-item util--hide-mobile"
+          >
+            <!-- <span class="site-header__karma__label">Karma</span>
+            <span class="site-header__karma__points" id="js--karma-points-count"
+              >0</span
+            > -->
+          </div>
+
+
+        </div>
+      </div>
+      <div class="flex-grid__item">
+        <div class="site-header__user flex-grid flex-grid--center-both">
+          <div id="js--region-user-menu">
+            <div>
+              <div class="menu-wrapper site-header__nav-item util--hide-mobile">
+                <div class="menu-wrapper__toggle">
+                  <div>
+                    <div class="image-frame image-frame--border-radius-full">
+<!-- ================================ -->
+                      <!-- <img
+                        src="./Learn - Toy Tale Challenge_files/48110809"
+                        alt="User avatar"
+                        class="site-header__user__thumbnail image-frame__image"
+                      /> -->
+<!-- ============================== -->
+                    </div>
+                    <div
+                      class="site-header__user__menu__toggle flex-grid flex-grid--center-both"
+                    >
+                      <svg
+                        width="8"
+                        height="8"
+                        data-state="closed"
+                        role="img"
+                        data-testid="js-inline-svg"
+                      >
+                        <use
+                          href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--chevron"
+                          xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--chevron"
+                        ></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-panel-accessory" id="js--region-panel-accessory">
+        <div>
+          <div class="module module--flush">
+            <ul
+              class="list list--spacing-large list--separators-faint list--indented-small js--notification-list notification-list"
+            ></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="site-superhero"
+      data-width="split"
+      id="js--region-ide-superhero"
+    ></section>
+    <div id="js--region-subheader" style="display: block;">
+      <section id="js--site-subheader" class="site-subheader">
+        <div class="site-subheader__wrapper">
+          <div class="site-subheader__wrapper__inner">
+            <div class="site-subheader__aux">
+              <ul
+                class="horizontal-list horizontal-list--spacing-small horizontal-list--display-inline horizontal-list--vertical-middle"
+              >
+                <li title="Open">
+                  <a
+                    class="js--open-button button button--has-icon button--height-small button--color-blue"
+                    href="learn-ide://learn-ide-3/jsdom-toy-tale-dumbo-web-051319"
+                    ><svg class="button__icon" fill="white">
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo"
+                      ></use></svg
+                    >Open IDE</a
+                  >
+                </li>
+                <li title="Open in Github">
+                  <a
+                    class="button button--icon-only button--color-grey-faint"
+                    href="https://github.com/gingkolane/jsdom-toy-tale-dumbo-web-051319"
+                    target="_blank"
+                    ><svg class="button__icon" width="16" height="16">
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo--github"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo--github"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li title="Raise an Issue">
+                  <a
+                    class="button button--icon-only button--color-grey-faint"
+                    href="https://github.com/learn-co-curriculum/jsdom-toy-tale/issues/new"
+                    target="_blank"
+                    ><svg class="button__icon" width="16" height="16">
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--flag"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--flag"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li title="View Fullscreen">
+                  <a
+                    class="button button--icon-only button--color-grey-faint js-fullscreen-toggle"
+                    href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#fullscreen"
+                    ><svg class="button__icon" width="16" height="16">
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--fullscreen"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--fullscreen"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="site-subheader__main">
+              <ul
+                class="horizontal-list horizontal-list--display-inline horizontal-list--spacing-small horizontal-list--vertical-middle"
+              >
+                <li>
+                  <h2
+                    class="heading heading--level-2"
+                    title="Toy Tale Challenge"
+                  >
+                    <strong>Mod 3 project - a feature proposal</strong><br> 
+                    <strong>Student-driven issue reporting system for learn.co labs</strong>
+                    <span class="util--padding-lm"
+                      ><svg fill="#C4C4C4" width="12" height="12">
+                        <use
+                          href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--lab"
+                          xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--lab"
+                        ></use></svg
+                    ></span>
+                  </h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="js--region-banner" style="display: none;"></div>
+    <section id="js--direct-messages">
+      <div class="site-sidebar--fixed" data-visibility="hidden">
+        <div class="fc--dm-panel">
+          <div
+            class="module--lilypad module--lilypad--background-color-grey-darker module--corners-sharp"
+          >
+            <div
+              class="module__head util--text-align-c"
+              style="padding: 10px 14px 8px;"
+            >
+              <div class="util--pull-left">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="17"
+                      height="17"
+                      class="util--pull-right"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                      ></use></svg></a
+                ></span>
+              </div>
+              <span class="heading heading--color-white heading--level-6"
+                >Direct Messages</span
+              >
+              <div class="util--pull-right">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                      ></use></svg></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="module module--spacious">
+            <div class="media-block media-block--spacing-tightest">
+              <div class="media-block__media">
+                <label
+                  class="heading heading--color-grey-dark heading--level-5 util--margin-lm"
+                  >To:</label
+                >
+              </div>
+              <div class="media-block__media">
+                <input
+                  type="text"
+                  class="input input--border-none input--padding-none util--padding-ll"
+                />
+              </div>
+            </div>
+          </div>
+          <ul
+            class="fc--dm-user-list list list--spacing-none list--separators-grey-faint list--last-child-border"
+            style="width: 100%;"
+          ></ul>
+        </div>
+        <div class="fc--dm-panel active">
+          <div
+            class="module--lilypad module--lilypad--background-color-grey-darker module--corners-sharp"
+          >
+            <div
+              class="module__head util--text-align-c"
+              style="padding: 10px 14px 8px;"
+            >
+              <div class="util--pull-left">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="17"
+                      height="17"
+                      class="util--pull-right"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                      ></use></svg></a
+                ></span>
+              </div>
+              <span class="heading heading--color-white heading--level-6"
+                >Direct Messages</span
+              >
+              <div class="util--pull-right">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                      ></use></svg></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <ul
+            class="fc--dm-inbox-list list list--spacing-none list--separators-grey-faint list--last-child-border"
+          >
+            <li class="util--relative hoverable">
+              <div class="media-block status-alert" data-status="offline">
+                <div class="media-block__media">
+                  <div class="image-frame image-frame--fixed-size-xlarge">
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/avatar.png"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    />
+                  </div>
+                </div>
+                <div class="media-block__content">
+                  <span
+                    class="status-alert__dot util--vertical-align-m util--display-inline-block util--margin-rs"
+                  ></span
+                  ><span
+                    class="heading heading--level-4 heading--font-size-smallest "
+                    >Kenton Archer</span
+                  >
+                  <div
+                    class="heading heading--level-5 heading--weight-lighter heading--color-grey util--truncate-ellipsis"
+                    style="max-width: 155px;"
+                  >
+                    Im a prospective student going into Flatiron
+                  </div>
+                  <div
+                    class="heading heading--level-5 heading--weight-lighter heading--font-size-smaller heading--color-grey"
+                  >
+                    <time
+                      datetime="2019-04-18T19:15:13.000Z"
+                      title="2019-04-18T19:15:13.000Z"
+                      >3 months ago</time
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="fc--dm-panel">
+          <div
+            class="module--lilypad module--lilypad--background-color-grey-darker module--corners-sharp"
+          >
+            <div
+              class="module__head util--text-align-c"
+              style="padding: 10px 14px 8px;"
+            >
+              <div class="util--pull-left">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="17"
+                      height="17"
+                      class="util--pull-right"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--new-message"
+                      ></use></svg></a
+                ></span>
+              </div>
+              <span class="heading heading--color-white heading--level-6"
+                >Direct Messages</span
+              >
+              <div class="util--pull-right">
+                <span class="heading heading--color-grey-light"
+                  ><a class="link--color-inherit"
+                    ><svg
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--x"
+                      ></use></svg></a
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="module util--padding-ts util--text-align-c util--pull-center"
+          >
+            <ul class="chat-room-activity big-activity">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div
+            class="module__body fc--dm-message-list util--padding-tl"
+            id="fc--message-list"
+          >
+            <ul
+              class="list list--spacing-large list--last-child-padding list--first-child-padding"
+            >
+              <section class="module">
+                <h2 class="heading heading--level-2 heading--font-size-smaller">
+                  Loading...
+                </h2>
+              </section>
+            </ul>
+          </div>
+          <div class="fc--dm-controls util--affix-bottom-right">
+            <div
+              class="module--lilypad module--lilypad--background-color-white module--corners-sharp module--lilypad--border-vertical-color-grey-faint"
+            >
+              <div class="module__foot">
+                <div class="col col--size-4of5">
+                  <textarea
+                    id="js--dm-txt-input"
+                    class="js--dm-txt-input input input--textarea-clear input--textarea-hide-scroll"
+                    type="text"
+                    placeholder="Begin typing..."
+                  ></textarea>
+                </div>
+                <div class="col col--size-1of5">
+                  <button class="dm-chat-new-upload"></button
+                  ><label class="dm-chat-new-upload-input"
+                    ><input
+                      type="file"
+                      name="file-input"
+                      id="js--dm-file-input"
+                      class="file-input"
+                  /></label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="module--lilypad module--lilypad--background-color-grey-faintest module--corners-sharp util--text-align-r util--padding-rm util--padding-tm util--padding-bm"
+            >
+              <span
+                class="heading heading--level-4 heading--weight-lighter heading--font-size-smaller heading--color-grey-light"
+                style="font-size: 9px;"
+                >Tip: Use ` for code snippets</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="js--notifications"></section>
+    <section id="js--feature-tour"><div></div></section>
+    <section id="js--region-flash"></section>
+    <section id="flash"></section>
+    <section class="site-main" id="js--region-main">
+      <div class="site-main__inner">
+        <div id="js--region-body-content">
+          <div>
+            <div class="level level--add-padding-early">
+              <div class="level__inner">
+                <div class="module">
+                  <div class="module__body">
+                    <div class="util--padding-rl">
+                      <h6 class="bubble-bar__label">13 Students Working</h6>
+                      <ul class="js--students-list bubble-bar__list">
+                        <li
+                          data-toggle="tooltip"
+                          data-title="tlam212"
+                          title="tlam212"
+                          data-avatar="https://avatars.githubusercontent.com/u/37944382"
+                          data-username="tlam212"
+                          data-user-full-name="Toni Lamont"
+                          data-user-id="264566"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/tlam212"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/37944382"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li
+                          data-toggle="tooltip"
+                          data-title="hilarious-device-4820"
+                          title="hilarious-device-4820"
+                          data-avatar="https://avatars.githubusercontent.com/u/12835014"
+                          data-username="hilarious-device-4820"
+                          data-user-full-name="Stefanos Ugbit"
+                          data-user-id="300104"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/hilarious-device-4820"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/12835014"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li
+                          data-toggle="tooltip"
+                          data-title="oneilld136"
+                          title="oneilld136"
+                          data-avatar="https://avatars.githubusercontent.com/u/41308716"
+                          data-username="oneilld136"
+                          data-user-full-name="Danielle O&#39;Neill"
+                          data-user-id="344496"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/oneilld136"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/41308716"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li
+                          data-toggle="tooltip"
+                          data-title="binding-command-5862"
+                          title="binding-command-5862"
+                          data-avatar="https://avatars.githubusercontent.com/u/6547204"
+                          data-username="binding-command-5862"
+                          data-user-full-name="Lorena Ramirez-Lopez"
+                          data-user-id="414313"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/binding-command-5862"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/6547204"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li
+                          data-toggle="tooltip"
+                          data-title="delightful-text-8732"
+                          title="delightful-text-8732"
+                          data-avatar="https://avatars.githubusercontent.com/u/42975882"
+                          data-username="delightful-text-8732"
+                          data-user-full-name="Tom MacLean"
+                          data-user-id="419040"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/delightful-text-8732"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/42975882"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li
+                          data-toggle="tooltip"
+                          data-title="yone920"
+                          title="yone920"
+                          data-avatar="https://uploads-learn.s3.amazonaws.com/uploads/identities/learn_account/avatar/c8c6ee5d-2604-4fab-936b-e9ec066ccfce/avatar.jpeg"
+                          data-username="yone920"
+                          data-user-full-name="Yonas Fesehatsion"
+                          data-user-id="420497"
+                          data-user-authenticated="true"
+                          class="hovercard hovercard__trigger hovercard__content--bottom-right hovercard__user-avatar"
+                        >
+                          <a
+                            class="bubble-bar__link"
+                            href="https://learn.co/yone920"
+                            target="_blank"
+                            ><img
+                              class="bubble-bar__link__image"
+                              src="./Learn - Toy Tale Challenge_files/avatar.jpeg"
+                              alt="User avatar"
+                          /></a>
+                        </li>
+                        <li class="bubble-bar__more">
+                          <p class="util--padding-ls util--padding-rs">+7</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="level level--add-padding-early">
+              <div class="level__inner">
+                <div class="module module--margin-bottom-largest">
+                  <div class="module__body">
+
+                    <div id="list-panel" class="text-block text-block--readme util--padding-ts">
+                      <h2> Project requirements </h2>
+                      <li>Rails API backend</li>
+                      <li>Vanilla javascript frontend</li>
+                      <li>Fetch and CRUD</li>
+                      <h2 id="displayAllRepos"> Deliverables </h2>
+                      <ul id="list">
+                      </ul>
+                    </div>
+                        
+                      <div id="show-panel">
+                      
+                        <div id='repo-container'>
+                        </div>
+
+                        
+                        <div id='user-container'>
+                        </div>
+                      
+                        <!-- <div id='completion-container'> 
+                            
+                          <button id="next-lesson">Next lesson</button>
+                      
+                          <form id="completion-survey-form">
+                          </form>
+                      
+                        </div> -->
+                      
+                      </div>
+
+                    <div
+                      class="text-block text-block--readme util--padding-ts"
+                      data-readme-content-test=""
+                    >
+
+<!-- =========================================================================================== -->
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="js--data-science-application-modal"></div>
+        <div id="js--bootcamp-prep-application-modal"></div>
+        <div class="level level--add-padding-early">
+          <div class="level__inner"><div id="js--jupyter-container"></div></div>
+        </div>
+        <footer class="site-main__inner__footer" id="js--region-main-footer">
+          <div class="site-main__inner__footer__inner">
+            <div class="table-grid table-grid--spread-content">
+              <div class="table-grid__cell table-grid__cell--nowrap">
+                <svg
+                  class="site-main__inner__footer__icon"
+                  width="10"
+                  height="12"
+                >
+                  <use
+                    href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo--flatiron"
+                    xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__logo--flatiron"
+                  ></use>
+                </svg>
+                Learn. Love. Code.
+              </div>
+              <div class="table-grid__cell table-grid__cell--fill">
+                <a href="https://learn.co/tos" target="_blank"
+                  >Terms &amp; Conditions</a
+                >
+              </div>
+              <div class="table-grid__cell table-grid__cell--nowrap">
+                Made with
+                <svg
+                  fill="red"
+                  class="site-main__inner__footer__icon"
+                  width="12"
+                  height="12"
+                >
+                  <use
+                    href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--heart"
+                    xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--heart"
+                  ></use>
+                </svg>
+                by
+                <strong
+                  ><a
+                    href="http://flatironschool.com/?__hstc=112149531.2151c23238dcee895452a168b7a876f8.1560829144294.1562811146246.1562858717616.65&amp;__hssc=112149531.4.1562858717616&amp;__hsfp=909706415"
+                    rel="noopener"
+                    target="_blank"
+                    >Flatiron School</a
+                  ></strong
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+    <section class="site-widget">
+      <div id="js--friends-widget">
+        <div>
+          <div
+            class="module module--flush module--flat module--island module--corners-sharp"
+          >
+            <ul
+              class="list list--spacing-large util--padding-tm util--padding-bm"
+            >
+              <li>
+                <a
+                  href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                  ><div
+                    class="image-frame image-frame--border-radius-small image-frame--fixed-size-medium image-frame--has-badge util--pull-center"
+                  >
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/46700083"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    /><svg
+                      class="image-frame__badge image-frame__badge--color-green image-frame__badge--side-alt image-frame__badge--offset-large"
+                      width="6"
+                      height="6"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                      ></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                  ><div
+                    class="image-frame image-frame--border-radius-small image-frame--fixed-size-medium image-frame--has-badge util--pull-center"
+                  >
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/6508734"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    /><svg
+                      class="image-frame__badge image-frame__badge--color-green image-frame__badge--side-alt image-frame__badge--offset-large"
+                      width="6"
+                      height="6"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                      ></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                  ><div
+                    class="image-frame image-frame--border-radius-small image-frame--fixed-size-medium image-frame--has-badge util--pull-center"
+                  >
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/avatar(1).jpeg"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    /><svg
+                      class="image-frame__badge image-frame__badge--color-green image-frame__badge--side-alt image-frame__badge--offset-large"
+                      width="6"
+                      height="6"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                      ></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                  ><div
+                    class="image-frame image-frame--border-radius-small image-frame--fixed-size-medium image-frame--has-badge util--pull-center"
+                  >
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/avatar(2).jpeg"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    /><svg
+                      class="image-frame__badge image-frame__badge--color-green image-frame__badge--side-alt image-frame__badge--offset-large"
+                      width="6"
+                      height="6"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                      ></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.co/tracks/web-development-immersive-3-1-module-three/front-end-web-programming/communication-with-the-server/toy-tale-challenge#"
+                  ><div
+                    class="image-frame image-frame--border-radius-small image-frame--fixed-size-medium image-frame--has-badge util--pull-center"
+                  >
+                    <img
+                      src="./Learn - Toy Tale Challenge_files/46931856"
+                      alt="User avatar"
+                      class="image-frame__image"
+                    /><svg
+                      class="image-frame__badge image-frame__badge--color-green image-frame__badge--side-alt image-frame__badge--offset-large"
+                      width="6"
+                      height="6"
+                      role="img"
+                      data-testid="js-inline-svg"
+                    >
+                      <use
+                        href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                        xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--checkmark"
+                      ></use>
+                    </svg></div
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="button button--corners-square button--color-blue-purple-gradient util--padding-bl util--padding-tl util--padding-rl util--padding-ll"
+          >
+            <svg width="21" height="21" role="img" data-testid="js-inline-svg">
+              <use
+                href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--friend-widget"
+                xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--friend-widget"
+              ></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="js--ad-unit"></div>
+    <section class="site-sidebar" id="js--region-sidebar">
+      <div class="site-sidebar__actions">
+        <div class="module" id="js--need-help">
+          <ul class="list">
+            <li>
+              <div
+                class="button-badge-unit js--need-help-button"
+                id="js--need-help-button"
+                data-status="active"
+              >
+                <div class="button-badge-unit__button">
+                  <svg class="button-badge-unit__badge">
+                    <use
+                      href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--question-mark"
+                      xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--question-mark"
+                    ></use></svg
+                  ><span class="button-badge-unit__label">Ask a Question</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="button-badge-unit js--question-count-button disabled"
+                data-status=""
+              >
+                <div class="button-badge-unit__button">
+                  <span
+                    class="js--question-count button-badge-unit__badge--count"
+                    data-count="0"
+                  ></span
+                  ><span class="button-badge-unit__label"
+                    >Questions Need Help</span
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-sidebar__content" id="js--region-sidebar-content">
+        <section>
+          <div class="row">
+            <div class="status-alert js--complete-button" data-status="">
+              <div class="status-alert__show-when-status-good">
+                <div class="site-sidebar__collapsable">
+                  <div class="site-sidebar__collapsable__step--show-small">
+                    <div class="module module--flush-wings module--flush-inner">
+                      <div class="module__head">
+                        <div class="status-alert__bubble hoverable"></div>
+                        <div
+                          class="heading heading--level-6 heading--font-size-smaller util--padding-tm util--text-align-c"
+                        >
+                          <strong class="status-alert__title">Done</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="site-sidebar__collapsable__step--hide-small site-sidebar__collapsable__step--hide-small--with-reveal"
+                  >
+                    <div class="module module--lilypad">
+                      <div class="module__body">
+                        <div class="media-block media-block--spacing-tight">
+                          <div class="media-block__media">
+                            <div class="status-alert__bubble"></div>
+                          </div>
+                          <div
+                            class="media-block__content media-block__content--fill"
+                          >
+                            <div
+                              class="heading heading--level-5 heading--font-size-larger heading--weight-lighter"
+                            >
+                              <strong
+                                class="status-alert__title status-alert__show-when-status-good"
+                                >Completed </strong
+                              ><span class="status-alert__subtitle"
+                                >this Lab</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="status-alert__show-when-status-good">
+                        <div
+                          class="module module--lilypad module--flush module--padding-flush-wings module--padding-flat js--solution-button"
+                        >
+                          <div class="module__foot">
+                            <a
+                              class="button button--flush button--height-xxsmall button--color-grey-light"
+                              href="https://github.com/learn-co-curriculum/jsdom-toy-tale/tree/solution"
+                              target="_blank"
+                              ><span class="util--font-style-1"
+                                >Solution</span
+                              ></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="status-alert" data-status="">
+              <div class="status-alert__hide-when-status-good">
+                <div class="js--child-container">
+                  <div class="row">
+                    <div class="site-sidebar__collapsable">
+                      <div class="site-sidebar__collapsable__step--show-small">
+                        <div
+                          class="module module--flush-wings module--flush-inner"
+                        >
+                          <div
+                            class="status-alert js--status"
+                            data-status="good"
+                          >
+                            <div class="module__head">
+                              <div class="status-alert__bubble hoverable"></div>
+                              <div
+                                class="heading heading--level-6 heading--font-size-smaller util--padding-tm util--text-align-c"
+                              >
+                                <strong class="status-alert__title"
+                                  >Fork</strong
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="site-sidebar__collapsable__step--hide-small site-sidebar__collapsable__step--hide-small--with-reveal"
+                      >
+                        <div class="module module--lilypad">
+                          <div class="module__body">
+                            <div
+                              class="status-alert js--status"
+                              data-status="good"
+                            >
+                              <div
+                                class="media-block media-block--spacing-tight"
+                              >
+                                <div class="media-block__media">
+                                  <div class="status-alert__bubble"></div>
+                                </div>
+                                <div
+                                  class="media-block__content media-block__content--fill"
+                                >
+                                  <div
+                                    class="heading heading--level-5 heading--font-size-larger heading--weight-lighter"
+                                  >
+                                    <strong
+                                      class="status-alert__title--has-link status-alert__hide-when-status"
+                                      ><a
+                                        href="https://github.com/learn-co-students/jsdom-toy-tale-dumbo-web-051319"
+                                        target="_blank"
+                                        >Fork
+                                      </a></strong
+                                    ><strong
+                                      class="status-alert__title--has-link status-alert__show-when-status"
+                                      ><a
+                                        href="https://github.com/gingkolane/jsdom-toy-tale-dumbo-web-051319"
+                                        target="_blank"
+                                        >Forked
+                                      </a></strong
+                                    ><span class="status-alert__subtitle"
+                                      >this Lab</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="site-sidebar__collapsable">
+                      <div class="site-sidebar__collapsable__step--show-small">
+                        <div
+                          class="module module--flush-wings module--flush-inner"
+                        >
+                          <div class="status-alert js--status" data-status="">
+                            <div class="module__head">
+                              <div class="status-alert__bubble hoverable"></div>
+                              <div
+                                class="heading heading--level-6 heading--font-size-smaller util--padding-tm util--text-align-c"
+                              >
+                                <strong class="status-alert__title"
+                                  >Submit</strong
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="site-sidebar__collapsable__step--hide-small site-sidebar__collapsable__step--hide-small--with-reveal"
+                      >
+                        <div class="module module--lilypad">
+                          <div class="module__body">
+                            <div class="status-alert js--status" data-status="">
+                              <div
+                                class="media-block media-block--spacing-tight"
+                              >
+                                <div class="media-block__media">
+                                  <div class="status-alert__bubble"></div>
+                                </div>
+                                <div class="media-block__content">
+                                  <div
+                                    class="heading heading--level-5 heading--font-size-larger heading--weight-lighter"
+                                  >
+                                    <strong
+                                      class="status-alert__title status-alert__hide-when-status"
+                                      >Submit </strong
+                                    ><strong
+                                      class="status-alert__title status-alert__show-when-status-pending"
+                                      >Submitting </strong
+                                    ><strong
+                                      class="status-alert__title status-alert__show-when-status-good"
+                                      >Submitted </strong
+                                    ><span class="status-alert__subtitle"
+                                      >Pull Request</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="status-alert__show-when-status-good">
+                            <div
+                              class="module module--lilypad module--flush module--padding-flush-wings module--padding-flat"
+                            >
+                              <div class="module__foot">
+                                <a
+                                  class="button button--flush button--height-small button--color-grey-light"
+                                  href="https://github.com/learn-co-curriculum/jsdom-toy-tale/tree/solution"
+                                  target="_blank"
+                                  ><span class="util--font-style-1"
+                                    >Solution</span
+                                  ></a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="js--signature-card">
+                      <div class="site-sidebar__collapsable">
+                        <div
+                          class="site-sidebar__collapsable__step--show-small"
+                        >
+                          <div
+                            class="module module--flush-wings module--flush-inner"
+                          >
+                            <div class="status-alert js--status" data-status="">
+                              <div class="module__head">
+                                <div
+                                  class="status-alert__bubble hoverable"
+                                ></div>
+                                <div
+                                  class="heading heading--level-6 heading--font-size-smaller util--padding-tm util--text-align-c"
+                                >
+                                  <strong
+                                    class="status-alert__title status-alert__hide-when-status"
+                                    >Read</strong
+                                  ><strong
+                                    class="status-alert__title status-alert__show-when-status"
+                                    >Read</strong
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="site-sidebar__collapsable__step--hide-small site-sidebar__collapsable__step--hide-small--with-reveal"
+                        >
+                          <div class="module module--lilypad">
+                            <div class="status-alert js--status" data-status="">
+                              <div class="module__head">
+                                <div
+                                  class="media-block media-block--dual-media media-block--spacing-tight"
+                                >
+                                  <div class="media-block__media">
+                                    <div class="status-alert__bubble"></div>
+                                  </div>
+                                  <div class="media-block__content">
+                                    <div
+                                      class="heading heading--level-5 heading--font-size-larger"
+                                    >
+                                      <strong
+                                        class="status-alert__title status-alert__hide-when-status"
+                                        >Complete </strong
+                                      ><strong
+                                        class="status-alert__title status-alert__show-when-status"
+                                        >Finished </strong
+                                      ><span class="status-alert__subtitle"
+                                        >Lesson?</span
+                                      >
+                                    </div>
+                                  </div>
+                                  <div class="media-block__media">
+                                    <div
+                                      class="js--feature-tour-done-button js--complete button button--height-xsmall button--width-xsmall status-alert__hide-when-status unselectable"
+                                    >
+                                      I'm Done
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="js--share-success-button status-alert" data-status="">
+              <div class="status-alert__show-when-status-good">
+                <div class="site-sidebar__collapsable">
+                  <div class="site-sidebar__collapsable__step--show-small">
+                    <div class="module module--flush-wings module--flush-inner">
+                      <div class="module__head">
+                        <div
+                          class="status-alert__bubble--with-icon status-alert__bubble--with-icon--color-inverted hoverable"
+                        >
+                          <svg
+                            class="status-alert__bubble__icon"
+                            fill="currentColor"
+                            width="16"
+                            height="16"
+                          >
+                            <use
+                              href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--share"
+                              xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--share"
+                            ></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="site-sidebar__collapsable__step--hide-small">
+                    <div class="module">
+                      <div class="tooltip">
+                        <div class="spinner"></div>
+                        <div
+                          class="button button--has-icon button--color-green button--height-large button--corners-tight button--layout-block"
+                        >
+                          <svg
+                            class="button__icon"
+                            fill="white"
+                            width="24"
+                            height="24"
+                          >
+                            <use
+                              href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--share"
+                              xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--share"
+                            ></use></svg
+                          >Share Your Success
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="site-sidebar__collapsable">
+              <div class="site-sidebar__collapsable__step--show-small">
+                <div class="module module--flush-wings module--flush-inner">
+                  <div
+                    class="status-alert js--next-button-status"
+                    data-status=""
+                  >
+                    <div class="module__head">
+                      <div
+                        class="js--feature-tour-done-button js--next-button status-alert__bubble--with-icon status-alert__bubble--with-icon--color-inverted status-alert__bubble--main hoverable"
+                      >
+                        <svg
+                          class="status-alert__bubble__icon"
+                          fill="currentColor"
+                          width="24"
+                          height="24"
+                        >
+                          <use
+                            href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--arrow--right"
+                            xlink:href="/assets/sprite-13328f1cb7510cbc9233336a481d01ff9647841b19438cc121cd46efedd2e762.svg#svg__icon--arrow--right"
+                          ></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="site-sidebar__collapsable__step--hide-small">
+                <div class="module">
+                  <div
+                    class="js--feature-tour-done-button status-alert js--next-button-status"
+                    data-status=""
+                  >
+                  <!-- ===================================================== -->
+
+                    <div id='completion-container'> 
+			
+                      <!-- <button id="old-next-lesson">Next lesson</button> -->
+                      <div id="next-lesson" class="status-alert__button--main button button--height-large button--corners-tight button--layout-block js--next-button">
+                        Next Lesson
+                      </div>
+
+                      <!-- <form id="completion-survey-form">
+                      </form> -->
+                  
+                    </div>
+
+<!-- The Modal -->
+  <div id="my-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close"> X </span>
+      <form id="completion-survey-form">
+      </form>
+    </div>
+  
+  </div>
+
+<!-- ================================================= -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="site-sidebar__footer" id="js--region-sidebar-footer"></div>
+    </section>
+    <section class="panel-master-detail" id="js--region-panel-master-detail">
+      <div class="site-panel-master" id="js--region-panel-master"></div>
+      <div
+        class="site-panel-master-accessory"
+        id="js--region-panel-master-accessory"
+      >
+        <div>
+          <div class="module module--flush">
+            <ul
+              class="list list--spacing-none list--separators-faint list--indented-small js--question-chat-lobby question-chat-lobby"
+            ></ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="site-panel-detail util--anchor"
+        id="js--region-panel-detail"
+      ></div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <div class="site-overlay" id="js--site-overlay">
+      <div class="site-overlay__inner">
+        <div class="site-overlay__content" id="js--site-overlay-content">
+          <div id="js--region-modal"></div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      id="intercom-frame"
+      style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;"
+      aria-hidden="true"
+      tabindex="-1"
+      src="./Learn - Toy Tale Challenge_files/saved_resource.html"
+    ></iframe>
+    <div id="intercom-css-container">
+      <style data-emotion="intercom-global"></style>
+    </div>
+
+    <!-- =============================== -->
+    <div id="intercom-container" class="intercom-namespace">
+      <style>
+        html.intercom-mobile-messenger-active,
+        html.intercom-mobile-messenger-active > body,
+        html.intercom-modal-open,
+        #intercom-container-body {
+          overflow: hidden !important;
+        }
+        html.intercom-mobile-messenger-active,
+        html.intercom-mobile-messenger-active > body {
+          position: static !important;
+        }
+        html.intercom-mobile-messenger-active > body {
+          height: 0 !important;
+          margin: 0 !important;
+        }
+        iframe#intercom-frame {
+          position: absolute !important;
+          opacity: 0 !important;
+          width: 1px !important;
+          height: 1px !important;
+          top: 0 !important;
+          left: 0 !important;
+          border: none !important;
+          display: block !important;
+          z-index: -1 !important;
+        }
+      </style>
+      <div class="intercom-app" aria-live="polite">
+        <div id="intercom-modal-container"></div>
+      </div>
+    </div>
+
+
+      
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
