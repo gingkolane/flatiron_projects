@@ -1,4 +1,4 @@
-# MCW_Doc
+# Ad Hoc Doc
 
 This is the mod1 project for my coding bootcamp in Flatiron. It is a joint project of Miles, Wei and me. It is written in ruby. Data source is clinicaltrials.gov in sqlite3 database.  
 
