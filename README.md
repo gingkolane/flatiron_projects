@@ -1,58 +1,33 @@
-# README
+# MCW_Doc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the mod1 project for my coding bootcamp in Flatiron. It is a joint project of Miles, Wei and me. It is written in ruby. Data source is clinicaltrials.gov in sqlite3 database.  
 
-Things you may want to cover:
+A basic cli program generates a greeting interface, gives the user a random disease, then refers a list of doctors to the user, and user can choose a doctor. 
 
-* Ruby version
+To run the program, 
 
-* System dependencies
+ruby cli.rb
 
-* Configuration
 
-  **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
+Database structure in this project is the original structure of clincaltrials.gov, where a NCT_ID is used as primary key for all the data models. It shows an example of ruby query data from database without using active record. 
 
-### Option Two - Command Line CRUD App
-* Database creation
+For example: 
 
-* Database initialization
+#active record
+condition.studies
 
-* How to run the test suite
+required structure:
+conditions, studies, conditions_study
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+#standard structure, all table has a nct_id
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-## Instructions
+class Condition < ApplicationRecord
 
-1. Fork and clone this repository.
-2. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
-3. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
-4. Make sure your project checks off each of the above requirements.
-5. Prepare a video demo (narration helps!) describing how a user would interact with your working project.
-    * The video should:
-      - Have an overview of your project.(2 minutes max)
-6. Prepare a presentation to follow your video.(3 minutes max)
-    * Your presentation should:
-      - Describe something you struggled to build, and show us how you ultimately implemented it in your code.
-      - Discuss 3 things you learned in the process of working on this project.
-      - Address, if anything, what you would change or add to what you have today?
-      - Present any code you would like to highlight.   
-7. *OPTIONAL, BUT RECOMMENDED*: Write a blog post about the project and process.
+  def find_studies
+    Study.where(NCT_ID: self.NCT_ID)
+  end
 
----
-### Common Questions:
-- How do I turn off my SQL logger?
-```ruby
-# in config/environment.rb add this line:
-ActiveRecord::Base.logger = nil
-```
-=======
-* ...
->>>>>>> 9cbcebf6b2898c39629572c28adc70bb88002aae
-=======
-* ...
->>>>>>> 9cbcebf6b2898c39629572c28adc70bb88002aae
+We used rails backend for the data we had, but it was not used in the final presentation. In the end, only one file cli.rb is used.
+
+
