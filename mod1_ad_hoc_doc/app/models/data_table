@@ -1,0 +1,92 @@
+# create a table
+# table = TTY::Table.new ['header1','header2'], [['a1', 'a2'], ['b1', 'b2']]
+
+1. create a table that allow data pipe into table one row at a time
+#   table = TTY::Table.new do |t|
+#     t << ['a1', 'a2']
+#     t << ['b1', 'b2']
+#   end
+
+# #2. call renderer on this table
+# table.render(:ascii)
+
+# studytable = TTY::Table.new ['header1','header2'], [['a1', 'a2'], ['b1', 'b2']]
+
+
+class TableDisplay << ApplicationRecord
+
+  # display an array of studies in table
+  def study_table(studies)
+
+    # 1. create a study table
+    # table = TTY::Table.new ['header1','header2'], [['a1', 'a2'], ['b1', 'b2']]
+    study_header = [
+      "OFFICIAL_TITLE",
+      "BRIEF_SUMMARY",
+      "PHASE",
+      "CRITERIA",
+      "MINIMUM_AGE",
+      "MAXIMUM_AGE",
+      "GENDER",
+      "START_DATE",
+      "TARGET_DURATION",
+      "PRIMARY_COMPLETION_DATE",
+      "COMPLETION_DATE",
+      "ENROLLMENT",
+      "ENROLLMENT_TYPE",
+      "NCT_ID"
+      ]
+
+    study_array = studies.map do |study|
+      puts
+      "#{studies.FACILITY_NAME}, 
+      #{studies.OFFICIAL_TITLE},
+      #{studies.BRIEF_SUMMARY},
+      #{studies.PHASE},
+      #{studies.CRITERIA},
+      #{studies.MINIMUM_AGE},
+      #{studies.MAXIMUM_AGE},
+      #{studies.GENDER},
+      #{studies.START_DATE},
+      #{studies.TARGET_DURATION},
+      #{studies.PRIMARY_COMPLETION_DATE},
+      #{studies.COMPLETION_DATE},
+      #{studies.ENROLLMENT},
+      #{studies.ENROLLMENT_TYPE},
+      #{studies.NCT_ID}"
+    end 
+
+    studytable = TTY::Table.new study_header, study_array
+
+    #2. call renderer on this table
+    studytable.render(:ascii)
+  end
+
+  def facility_table(facilities)
+
+    # 1. create a facility table
+    # table = TTY::Table.new ['header1','header2'], [['a1', 'a2'], ['b1', 'b2']]
+    facility_header = [
+      'FACILITY_NAME',
+      'CITY',
+      'STATE',
+      'ZIP',
+      'COUNTRY'
+    ]
+
+    facility_array = facilities.map do |facility| 
+      puts
+        "#{facilities.FACILITY_NAME}, 
+        #{facilities.CITY}, 
+        #{facilities.STATE}, 
+        #{facilities.ZIP}, 
+        #{facilities.COUNTRY}"
+    end
+
+    facilitytable = TTY::Table.new facility_header, facility_array
+
+    #2. call renderer on this table
+    facility_table.render(:ascii)
+  end
+
+end
