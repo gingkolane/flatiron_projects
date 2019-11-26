@@ -1,0 +1,26 @@
+Within the master project repo, I used git subtree to add individual repos of subprojects to subdirectories. keeping the subproject's entire history.
+
+official doc:
+https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
+
+syntax:
+git subtree add   --prefix=<prefix> <repository> <ref>
+
+<!-- Add mod1_ad_hoc_doc -->
+$ git subtree add --prefix=mod1_ad_hoc_doc git@github.com:gingkolane/mod1_ad_hoc_doc.git master
+$ git push
+
+<!-- Add mod2_whatsup_doc -->
+$ git subtree add --prefix=mod2_whatsup_doc git@github.com:gingkolane/mod2_whatsup_doc.git master
+$ git push
+
+<!-- Add mod22_doc_search -->
+$ git subtree add --prefix=mod22_doc_search git@github.com:gingkolane/mod22_doc_search.git master
+$ git push
+
+<!-- Add mod3_completion_survey -->
+$ git subtree add --prefix=mod3_completion_survey git@github.com:gingkolane/mod3_completion_survey.git master
+
+
+
+
