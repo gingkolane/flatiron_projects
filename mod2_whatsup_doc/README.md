@@ -1,24 +1,10 @@
-# README
+# What's up Doc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This is the mod2 project I did with Mickey in Flatiron bootcamp. It is a rails app frontend and backend, using mysql database. 
 
-* Ruby version
+To run, cd to the project folder
+Bundle install
+rails s
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
