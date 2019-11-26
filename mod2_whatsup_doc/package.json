@@ -1,0 +1,7 @@
+{
+  "name": "WhatsUpDoc",
+  "private": true,
+  "dependencies": {
+    "startbootstrap-sb-admin": "^5.1.0"
+  }
+}

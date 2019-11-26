@@ -1,0 +1,60 @@
+<div class="show">
+
+<h1><strong><a href='<%= @study.URL %>' target="_blank"><%= @study.BRIEF_TITLE %></a></strong></h1>
+<h2>Study Status:</h2>
+
+<p><strong>Status:</strong> <%= @study.OVERALL_STATUS %> <strong>Start Date:</strong> <%= @study.START_DATE %> - <strong>Completion Date:</strong> <%= @study.COMPLETION_DATE %></p>
+
+<h3>Summary</h3>
+<%= @study.BRIEF_SUMMARY %><br>
+
+  <h3>Condition</h3>
+  <% @study.conditions.each do |condition| %><br>
+  <%= link_to condition.CONDITION, condition %><br>
+  <% end %>
+
+<h3>Interventions</h3>
+  <% @study.interventions.each do |intervention| %><br>
+  <%= link_to intervention.INTERVENTION_NAME, intervention %><br>
+  <%= intervention.DESCRIPTION %><br>
+  <% end %> 
+
+<h3>Investigators</h3>
+<% @study.investigators.each do |investigator| %><br>
+<%= link_to investigator.NAME_DEGREE, investigator %><br>
+<%= investigator.ROLE %><br>
+<%= investigator.FACILITY_NAME %><br>
+<%= investigator.CITY %><br>
+<%= investigator.STATE %><br>
+<%= investigator.ZIP %><br>
+<%= investigator.COUNTRY %><br>
+<% end  %>
+
+
+<h3>Criteria</h3>
+<%= @study.CRITERIA %><br>
+
+<h3>Study Type</h3>
+<%= @study.STUDY_TYPE %><br>
+<h3>Phase</h3>
+<%= @study.PHASE %><br>
+<h3>Gender</h3>
+<%= @study.GENDER %><br>
+<h3>Enrollment</h3>
+<p><%= @study.ENROLLMENT %></p>
+
+<h3>Ages</h3>
+<p><%= @study.MINIMUM_AGE %> - <%= @study.MAXIMUM_AGE %></p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

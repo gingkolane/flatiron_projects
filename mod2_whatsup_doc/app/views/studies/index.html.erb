@@ -1,0 +1,12 @@
+<div class="index">
+
+	<h1>Studies</h1>
+
+	<h4>Studies Count: <%= @studies.count %></h4>
+
+	<% @studies.take(35).each do |study| %>
+	<li><%= link_to study.BRIEF_TITLE, study %></li><br>
+
+	<% end %>
+</div>
+

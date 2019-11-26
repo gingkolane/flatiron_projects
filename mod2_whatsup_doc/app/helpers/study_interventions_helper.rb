@@ -1,0 +1,2 @@
+module StudyInterventionsHelper
+end

@@ -1,0 +1,6 @@
+class ConditionStudy < ApplicationRecord
+
+
+
+
+end

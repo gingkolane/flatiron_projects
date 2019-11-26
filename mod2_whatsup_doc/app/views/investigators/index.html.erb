@@ -1,0 +1,15 @@
+<div class="index">
+
+	<h1>Investigators</h1>
+
+	<h4>Investigators Count: <%= @investigators.count %></h4>
+
+
+	<% @investigators.take(35).each do |i| %>
+		<%= link_to i.NAME_DEGREE, i %><br>
+		<%= i.ROLE %><br>
+		<%= i.FACILITY_NAME %><br><br>
+	<% end %>
+</div>
+
+

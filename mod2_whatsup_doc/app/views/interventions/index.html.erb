@@ -1,0 +1,15 @@
+
+<div class="index">
+<h1>Interventions</h1>
+
+<h4>Interventions Count: <%= @interventions.count %></h4>
+
+
+<ul>
+<% @interventions.take(35).each do |i| %>
+	<li><%= link_to i.INTERVENTION_NAME, i %></li>
+<% end %>
+</ul>
+</div>
+
+

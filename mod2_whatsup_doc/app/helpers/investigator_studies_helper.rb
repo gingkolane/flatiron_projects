@@ -1,0 +1,2 @@
+module InvestigatorStudiesHelper
+end
