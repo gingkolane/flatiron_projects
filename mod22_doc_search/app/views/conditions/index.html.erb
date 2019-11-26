@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Condition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conditions.each do |condition| %>
+      <tr>
+        <td><%= link_to condition.CONDITION, condition %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Condition', new_condition_path %>

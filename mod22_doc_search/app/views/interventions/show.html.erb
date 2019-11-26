@@ -1,0 +1,51 @@
+
+<p>
+  <strong>Intervention name:</strong>
+  <%= @intervention.INTERVENTION_NAME %>
+</p>
+
+<p>
+  <strong>Intervention type:</strong>
+  <%= @intervention.INTERVENTION_TYPE %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @intervention.DESCRIPTION %>
+</p>
+
+<% if @intervention.investigators.nil?%>
+<h4> <%="Doctors who work with this intervention"%></h4>
+<ul>
+  <% @intervention.investigators.each do |investigator| %>
+  <li><%= link_to investigator.NAME_DEGREE, investigator %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<% if @intervention.studies.count > 0 %>
+<h4> Studies on this intervention</h4>
+<ul>
+<% @intervention.studies.each do |study| %>
+<li><%= link_to study.BRIEF_TITLE, study %></li>
+<% end %>
+</ul>
+<% end %>
+
+<% if @intervention.sponsors.count > 0 %>
+<h4> Sponsors who develop intervention</h4>
+<ul>
+<% @intervention.sponsors.each do |sponsor| %>
+<li><%= link_to sponsor.AGENCY, sponsor %></li>
+<% end %>
+</ul>
+<% end %>
+
+
+
+
+<%# list of studies  %>
+<%# list of investigators %>
+<%# list of sponsors %>
+
+<%= link_to 'Back', interventions_path %>

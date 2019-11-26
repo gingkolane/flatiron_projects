@@ -1,0 +1,15 @@
+<h1 class="h1">Users</h1>
+
+
+<ul>
+    <% @users.each do |user| %>
+      <tr>
+      <li>  <td><%= link_to user.name, user %></td>
+        <td><%= button_to 'Delete User', user, method: :delete, data: { confirm: 'Are you sure?' } %></td></i>
+      </tr>
+    <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New User', new_user_path %><br>

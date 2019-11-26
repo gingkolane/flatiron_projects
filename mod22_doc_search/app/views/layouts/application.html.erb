@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod2Mysql</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%# datatable CDN links %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <%# --------------%>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <!--top nav bar-->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-10">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/investigators">Doctors</a>
+              <a class="navbar-brand" href="/conditions">Conditions</a>
+              <a class="navbar-brand" href="/interventions">Treatments</a>
+              <a class="navbar-brand" href="/studies">Studies</a>
+              <a class="navbar-brand" href="/sponsors">Companies</a>
+            </div>         
+          </div>
+
+          <div class="col-xs-2">
+            <!--Login status bar-->
+            <% if @logged_in %>
+            <p>Logged in as: <%= link_to @current_user.username, @current_user %></p>
+            <%= button_to "Log out #{@current_user.username}", "/logout", method: :delete%>
+            <% else  %>
+            <%= link_to "Log in here", new_login_path %>
+            <%= link_to "Create a registration", new_user_path %>
+            <% end  %>
+            <!--Login status bar-->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--top nav bar-->
+
+    <div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-2">
+
+          <!-- Side navigation -->
+          <div class="sidenav">
+            <a href="/investigators/">My doctors</a>
+            <br>
+            <a href="/conditions">My conditions</a>
+            <br>
+             <a href="/interventions">My treatments</a>
+            <br>
+            <a href="/studies">My studies</a>
+            <br>
+            <a href="/sponsors">My pharmas</a>
+          </div>
+          <!-- Side navigation -->
+
+        </div>
+        <div class="col-xs-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

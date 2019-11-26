@@ -1,0 +1,50 @@
+<h1>Investigators</h1>
+
+<%= form_tag "/investigators", method: "GET" do %>
+  <%= label_tag :search_by_name %>
+  <%= text_field_tag :search_by_name, params[:search_by_name] %>
+
+  <%= label_tag :search_by_condition %>
+  <%= text_field_tag :search_by_condition, params[:search_by_condition] %>
+
+  <%= label_tag :search_by_city %>
+  <%= text_field_tag :search_by_city, params[:search_by_city] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+ <%= form_tag "/lists" do %>
+
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Name</th>
+      <th>Specialty</th>
+      <th>Hospital Associated</th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= submit_tag "Create a List" %> |
+    <%= label_tag "list name" %>
+    <%= text_field_tag("list[name]", params[:name]) %>
+
+    <% @investigators.first(50).each do |investigator| %>
+      <tr>
+        <td> <%= check_box_tag("list[investigator_ids][]", investigator.id)%> </td>
+
+        <td><%= link_to investigator.NAME_DEGREE, investigator %></td>
+        <td><%= investigator.specialty_diseases %>
+        <td><%= investigator.FACILITY_NAME %></td>
+        <td><%= investigator.CITY %></td>
+        <td><%= investigator.STATE %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% end %>

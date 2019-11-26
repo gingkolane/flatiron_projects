@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @investigator.NAME_DEGREE %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @investigator.ROLE %>
+</p>
+
+<p>
+  <strong>Facility name:</strong>
+  <%= @investigator.FACILITY_NAME %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @investigator.CITY %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @investigator.STATE %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @investigator.ZIP %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @investigator.COUNTRY %>
+</p>
+
+<p><strong>Specialties:</strong></p>
+  <ul><% @investigator.conditions.each do |condition|%>
+  <li><%= link_to condition.CONDITION, condition %></li>
+  <% end %>
+</ul>
+
+<p><strong>Studies:</strong></p>
+  <ul><% @investigator.studies.each do |study|%>
+  <li><%= link_to study.BRIEF_TITLE, study %></li>
+  <% end %>
+</ul>
+
+<p><strong>Pharmaceutical Companies Associated With:</strong></p>
+  <ul><% @investigator.sponsors.each do |sponsor|%>
+  <li><%= link_to sponsor.AGENCY, sponsor %></li>
+  <% end %>
+</ul>
+
+<%#= button_to 'Add to list', new_list_path, method: :get%>
+<%= link_to 'Edit', edit_investigator_path(@investigator) %> |
+<%= link_to 'Back', investigators_path %>

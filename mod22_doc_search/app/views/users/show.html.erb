@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h4><%= flash[:messages] %></h4>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+
+<h1>My lists:</h1>
+
+<% @user.lists.each do |list| %>
+
+  <h4><%= link_to list.name, list %></h4> <br>
+  <% list.investigators.each do |investigator| %>
+    <li><%= link_to investigator.NAME_DEGREE, investigator%> ,
+    <%= investigator.FACILITY_NAME %> ,
+    <%= investigator.CITY %>
+    </li>
+  <% end %>
+
+
+<% end %>
+
+<br>
+
+<%= link_to 'Create a List', investigators_path  %> | 
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Delete User', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', users_path %>

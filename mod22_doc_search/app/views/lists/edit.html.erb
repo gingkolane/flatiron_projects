@@ -1,0 +1,12 @@
+<h1>Editing List</h1>
+
+<%= render 'form', list: @list %>
+
+<ul>
+  <% @list.investigators.each do |investigator| %>
+  <li><%=investigator.NAME_DEGREE %></li>
+  <% end %>
+  </ul>
+
+<%= link_to 'Show', @list %> 
+<%= link_to 'Back', lists_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Interventions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Intervention name</th>
+      <th>Intervention type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interventions.each do |intervention| %>
+      <tr>
+        <td><%= link_to intervention.INTERVENTION_NAME, intervention %></td>
+        <td><%= intervention.INTERVENTION_TYPE %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
